@@ -29,10 +29,10 @@ var jsmbp = {
 				return retval; 
 			}
 		}
-		jsmbp.RegisteredComponents[name] = selector;
+		jsmbp.RegisteredModules[name] = selector;
 		$.fn[name].apply($(selector));
 	},
-	RegisteredComponents: {}
+	RegisteredModules: {}
 };
 
 $(document).ready(function(){
@@ -104,12 +104,11 @@ $(document).ready(function(){
 })();
 
 /**
- * Component
+ * Module
  *
- * A derived class of the standard Class to be used as the parent class
- * for component widgets, such as Accordions, Tooltips, Carousels, etc..
+ * Our module class that extends the base class "Class"
  */
-jsmbp.Component = Class.extend({
+jsmbp.Module = Class.extend({
 	options: {},
 	/**
 	 * init
@@ -164,8 +163,8 @@ jsmbp.Component = Class.extend({
 	 * @param elements  A set of elements to execute the method on
 	 */
 	callback: function(el) {
-	    for (var prop in lg.RegisteredComponents) {
-	    	$(el).find(lg.RegisteredComponents[prop]).each(function(idx,el) {
+	    for (var prop in jsmbp.RegisteredModules) {
+	    	$(el).find(jsmbp.RegisteredModules[prop]).each(function(idx,el) {
 	    		$.fn[prop].apply($(el));
 	    	});
 	    }
