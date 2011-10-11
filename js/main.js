@@ -29,7 +29,7 @@ var jsmbp = {
 				return retval; 
 			}
 		}
-		lg.RegisteredComponents[name] = selector;
+		jsmbp.RegisteredComponents[name] = selector;
 		
 		$(document).ready(function(){
 			$.fn[name].apply($(selector));
