@@ -1,7 +1,3 @@
-var pagePath = $('html').attr('id').split('-page')[0];
-
-var transitionEnd = 'transitionend webkitTransitionEnd';
-
 // Global namespace for site-wide functions.
 var jsmbp = {
 	/**
