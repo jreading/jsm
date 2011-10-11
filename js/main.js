@@ -109,7 +109,7 @@ $(document).ready(function(){
  * A derived class of the standard Class to be used as the parent class
  * for component widgets, such as Accordions, Tooltips, Carousels, etc..
  */
-lg.Component = Class.extend({
+jsmbp.Component = Class.extend({
 	options: {},
 	/**
 	 * init
@@ -131,6 +131,15 @@ lg.Component = Class.extend({
 
 		this.log('component init', this.options, this.element);
 	},
+	/**
+	 * pubsub
+	 *
+	 * Used to publish or subscribe to events from
+	 * or to modules.
+	 */
+	pubsub: function(el,ev,mode) {
+		$(el).trigger(ev)	
+	},
 
 	/**
 	 * log
@@ -145,42 +154,16 @@ lg.Component = Class.extend({
 			window.console.log(arguments);
 		}
 	},
-
-	/**
-	 * broadcast
-	 *
-	 * Broadcast method calls to other components on the page.
-	 * This can be useful if your carousel wants to close tooltips
-	 * when it changes pages, for example.
-	 * @usage this.broadcast('tooltipper', 'close');
-	 *
-	 * @param {String} component The component's name.
-	 * @param {String} method    The component's method to call.
-	 * @param {jQuery} elements  A set of element to execute the method for
-	 *                           optional - defaults to all instances of the component on the page.
-	 */
-	broadcast: function(component, method, elements) {
-		if (lg.RegisteredComponents[component]) {
-			var elements = elements || $('body').find(lg.RegisteredComponents[component]);
-			elements.not(this.element).each(function(idx,el){
-				$(el).data(component)[method]();
-			});
-		} else {
-			this.log('broadcast failed: component plugin does not exist', component, name);
-		}
-	},
 	/**
 	 * callback
 	 *
-	 * Callback is used to activate plugins or call
-	 * global lg methods on ajax loaded content or hidden
-	 * elements.
+	 * Callback is used to activate modules on 
+	 * ajax loaded content or hidden elements.
 	 * @usage this.callback('.wrapper');
 	 *
-	 * @param {jQuery} elements  A set of elements to execute the method on
+	 * @param elements  A set of elements to execute the method on
 	 */
 	callback: function(el) {
-		lg.reInit(el);
 	    for (var prop in lg.RegisteredComponents) {
 	    	$(el).find(lg.RegisteredComponents[prop]).each(function(idx,el) {
 	    		$.fn[prop].apply($(el));
@@ -189,10 +172,3 @@ lg.Component = Class.extend({
 		this.log('callback', el);
 	}
 });
-
-// Ensure that no stray console.log calls break functionality by defining an
-// empty console object and log function in browsers where they do not exist.
-if (typeof console == "undefined" || typeof console.log == "undefined") {
-	var console = { log: function() {} };
-	window.console = { log: function() {} };
-}
