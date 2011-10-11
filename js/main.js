@@ -30,16 +30,13 @@ var jsmbp = {
 			}
 		}
 		jsmbp.RegisteredComponents[name] = selector;
-		
-		$(document).ready(function(){
-			$.fn[name].apply($(selector));
-		});
+		$.fn[name].apply($(selector));
 	},
 	RegisteredComponents: {}
 };
 
 $(document).ready(function(){
-	lg.init();
+	jsmbp.init();
 });
 
 /* Simple JavaScript Inheritance
