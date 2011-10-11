@@ -1,0 +1,268 @@
+/* Generic grid styles for all pages. */
+.grid.slide {
+	border-top: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	margin: 25px 0;
+}
+
+.grid.slide.simple {
+	border-top: 0;
+	border-bottom: 0;
+	width: auto;
+	margin:0;
+}
+
+.grid .shim {
+	position: relative;
+	width: 745px; /* must be the same as the ".content-pages li" width */
+	min-height: 480px;
+	overflow: hidden;
+}
+
+
+
+
+/*begin -  bret added for 1 column, 4 wide products.  Not sure where these should live*/
+.grid.slide.no-top-border{
+	border-top:none;
+	margin-top:30px;
+}
+.column.wide .head-tooltips{
+	margin-top:0px;
+	float:none;	
+}
+
+.column.wide .page-controls{
+	margin:25px 15px;
+}
+
+.column.wide .shim {
+	width: 960px; /* must be the same as the ".content-pages li" width */
+}
+
+.column.wide .product-list-wrap, .grid.wide .product{
+	margin-left:-32px;
+}
+.column.wide .product{
+	 margin-left:32px;
+}
+
+.lt-ie9 .column.wide .product-list-wrap, .lt-ie9 .grid.wide .product{
+	margin-left:-40px;
+}
+.lt-ie9 .column.wide .product{
+	 margin-left:24px;
+}
+
+
+.column.wide ul.content-pages > li {
+	width:960px;
+}
+/*end - bret added for 1 column, 4 wide products.  Not sure where these should live*/
+
+ 
+ 
+.grid ul.content-pages {
+	position: relative;
+	list-style-type: none;
+	width: 999em;
+	padding-top: 2px;
+}
+
+.grid.slide ul.content-pages {
+	height:auto;
+	overflow:hidden;
+}
+
+.grid.slide ul.content-pages.animate {
+	-webkit-transition: left .7s ease-in-out,  height .3s linear .6s,  min-height .3s linear .6s;
+	-moz-transition: left .7s ease-in-out,  height .3s linear .6s,  min-height .3s linear .6s;
+}
+
+.grid ul.content-pages > li {
+	width: 745px; /* must be the same as the ".shim" width */
+	float: left;
+	height:auto;
+	min-height: 1px; /* 1px enforces its layout if it has no content yet. */
+}
+
+.grid.slide ul.content-pages > li {
+	margin-bottom:0px;
+}
+
+.page-controls {
+	text-align: right;
+	font-size: 11px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.page-controls.no-pad{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.page-controls.top {
+	margin-bottom: 0;
+}
+
+.ie-lt9 .page-controls{
+	padding-top:50px;
+}
+
+.ie-lt9 .page-controls.top{
+	padding-top:0px;
+}
+
+.page-controls .sort {
+	float: left;
+}
+
+.lt-ie9 .page-controls .sort{
+	margin-right: 80px;
+}
+
+
+/* was legend.. could not for the life of me get the legend to display inline */
+.page-controls .sort span {
+	padding-top: 6px;
+	margin-right: 10px;
+	float: left;
+	color: #D80546;
+	text-transform: uppercase;
+}
+
+.page-controls  .styled-select select{
+	font-size: 11px;
+}
+
+.page-controls .styled-select.large {
+    /* background-position: -90px -440px; */
+    width: 130px;
+}
+
+.page-controls .styled-select.large select{
+	width: 155px;
+}
+
+
+.lt-ie9 .page-controls .styled-select.large{
+	width: 163px;
+}
+
+.lt-ie9 .page-controls .styled-select.large select{
+	width: 163px;
+}
+
+.page-controls span.sort .styled-select.large{
+	width: 155px;
+}
+
+.page-controls span.sort .styled-select.large select{
+	width: 177px;
+}
+
+.grid .pager li.clear-compare{
+	margin-right: 15px;
+}
+
+.pager .pages a {
+	border-left: 1px solid #CCCCCC;
+    padding-left: 5px;
+    margin: 0 2px;
+}
+
+.pager .pages a:first-child {
+	border-left: 0;
+	padding-left: 0;
+}
+
+.page-controls a {
+	color: #D80546;
+	outline: none;
+}
+
+.page-controls a.active,
+.page-controls a.active:hover {
+	color: #5d5c5c;
+	cursor: default;
+	text-decoration: none;
+}
+
+.page-controls a.view-all {
+	margin-left: 10px;
+	border-left: 0;
+	padding-left: 0;
+}
+
+.page-controls a.clear-compare{
+	margin-right: 15px;
+	margin-left: 10px;
+}
+
+.grid button.compare-btn{
+    margin: -5px 0 0;
+	/* need more rigid controls on the size of this button,
+	   because its content (the count) changes dynamically. */
+	width: 90px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.grid h3{
+	font-size: 15px;
+	/*padding-top: 15px;*/
+	color: #666;
+}
+
+.head-tooltips {
+	text-align: right;
+	float: right;
+	margin-top: -35px;
+}
+
+#compared-items{
+	height:0px;
+	-moz-transition: all 0.2s ease-in-out;
+  	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	overflow: hidden;
+}
+
+#compared-items.opened{
+	height: 350px;
+	width: 750px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+	-moz-transition: all 0.2s ease-in-out;
+  	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.lt-ie9 .payload button{
+	margin-top: -40px;
+	margin-left: 190px;
+}
+
+.payload span.btn{
+	font-size: 9px;
+}
+
+.lt-ie9 .payload span.btn.selected{
+	margin-top: -18px;
+}
+
+hgroup p{
+	color:#666;
+}
+
+hgroup {
+	margin-bottom:10px;
+}
+
+/* I think these show up on the "search" page */
+.product-reviews .grid .shim,
+.product-reviews .grid ul.content-pages > li {
+	width: 826px;
+}

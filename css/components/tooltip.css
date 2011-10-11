@@ -1,0 +1,680 @@
+/* overlays */
+.tooltip {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	/* tooltips must not display initially */
+	visibility:hidden;
+	/* 1000 because products in the grid are set to 900. */
+	z-index: 9900;
+
+/* Standard tooltip theme is the style found most commonly on the site,
+   it is used for the product "quick looks", "at a glance" popovers, etc.
+   It has a subtle gray gradient background and a pink arrow. */
+	width: 390px;
+}
+
+.tooltip.open {
+	visibility:visible;
+}
+
+.tooltip.fade {
+	opacity: 0;
+}
+
+.csstransitions .tooltip.fade {
+	-webkit-transition: opacity .3s linear;
+	   -moz-transition: opacity .3s linear;
+	visibility:visible;
+}
+
+.csstransitions .tooltip.fade.open {
+	opacity: 1;
+}
+
+
+/* Standard theme is the default. */
+.tooltip .payload {
+	padding: 16px;
+	background: #ececec;
+	background: -moz-linear-gradient(bottom, #dedede, white 60%);
+	background: -webkit-gradient(linear, 0 0, 0 60%, from(#fff), to(#ececec));
+	        box-shadow: 0px 0px 4px #444;
+	-webkit-box-shadow: 0px 0px 4px #444;
+	   -moz-box-shadow: 0px 0px 4px #444;
+}
+
+/* downward pointing, centered pointer (by default) */
+.tooltip .pointer {
+	margin: 0 auto;
+	height: 10px;
+	width: 20px;
+	margin: 1px auto;
+	background: url("/common/images/global/lg-global-sprite.png") 0 -441px no-repeat;
+}
+
+.tooltip .pointer.align-left {
+	margin: 1px auto 1px 10px;
+}
+
+.tooltip .pointer.align-right {
+	margin: 1px 10px 1px auto;
+}
+
+
+/* Here follows various different preset tooltip styles.. */
+/* The modal is centered and fixed in the middle of the screen with a
+   transparent overlay covering the page */
+.modal {
+	width: 100%;
+	height: 100% /* this will be adjusted programatically */;
+	background: rgba(0, 0, 0, 0.25);
+	text-align: center;
+}
+
+.lt-ie9 .modal{
+	background: url("/common/images/global/dither.gif");
+}
+
+.modal .payload {
+	margin: 0 auto;
+	background: #fff;
+	padding: 15px;
+	width: 770px;
+	height: 528px;
+	text-align: left;
+
+	-webkit-box-shadow: 0px 0px 147px #333;
+	   -moz-box-shadow: 0px 0px 147px #333;
+	        box-shadow: 0px 0px 147px #333;
+}
+
+.modal .payload2 {
+	width: 556px;
+	height: 466px;
+	text-align: center;
+}
+.modal .payload object {
+	margin-top:18px;
+}
+
+.modal .payload3 {
+	width: 600px;
+	height: 575px;
+}
+
+/* If the browser does not support varying levels of opacity in colors,
+   then show a nice border around the content to make it stand out.  */
+.no-rgba .modal .payload {
+	border: 1px solid #ccc;
+}
+
+.productImage {
+	float:left;
+	width:465px;
+	height:414px;
+	text-align:center;
+	padding-right:0px;
+}
+
+/* .productDetails {
+	float:left;
+}*/
+
+.title-wrapper {
+	/* margin-top:16px; */
+	width:400px;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+
+.tooltip.standard h3 {
+	color:#5D5C5C;
+	font-size:16px;
+	text-transform:uppercase;
+}
+
+.tooltip h3 {
+	 margin-top:0;
+}
+
+.copy-wrapper {
+	height:auto;
+	width: 400px;
+	overflow:hidden;
+	clear: left;
+	margin-top: 40px;
+}
+
+.copy {
+	margin-top:-100px;
+}
+
+.copy a {
+	font-size: 11px;
+	display: block;
+	color: #D80546;
+}
+
+.copy button {
+    float:left;
+	clear:none;
+}
+
+.tooltip .copy {
+	 margin-top:0;
+}
+
+.tooltip h4 {
+	font-size:12px;
+	color:#666;
+	font-weight: bold;
+	font-family: Arial;
+	margin-bottom:10px;
+	width: 295px;
+}
+
+.tooltip ul.features {
+	float: left;
+	width: 250px;
+	min-height: 65px;
+}
+
+.tooltip li {
+	color:#666;
+	font-size:10px;
+	margin-bottom: 0;
+}
+
+.tooltip a.close {
+	float: right;
+	background: url("/common/images/global/lg-global-sprite.png") 0 -174px no-repeat transparent;
+	height: 17px;
+	width: 17px;
+	text-indent: -9999px;
+	cursor:pointer;
+	margin-right: -4px;
+	margin-top: -4px;
+}
+
+.endorsement-wrapper {
+	width: 340px;
+	padding-top:20px;
+	margin-top: 10px;
+	height:auto;
+	overflow:hidden;
+	border-top: 1px dotted #cccccc;
+	font-family:"BryantLGregular";
+}
+
+.endorsement-wrapper img {
+	display:block;
+	float:left;
+	padding:0px;
+}
+
+.endorsement-wrapper em {
+	clear:left;
+	float: right;
+	margin-right: 110px;
+	font-size:10px;
+	font-style:italic;
+	color:#000;
+}
+
+.endorsement-wrapper q {
+	color:#D80546;
+	font-size:17px;
+	width:263px;
+	float:left;
+
+}
+
+
+.ratings-large {
+	margin-top:10px;
+	height:41px;
+	width:100%;
+}
+
+
+/* gray, bubble-style tooltips, used primarily for "info" hover tooltips. */
+.bubble.tooltip {
+	width: 180px;
+	margin-top: -2px;
+	margin-left: -24px;
+}
+
+/* if the arrow will be flipped to face left, apply this class to align it. */
+.bubble.tooltip.left {
+	margin-left: 24px;
+}
+/* if being used in the Find The Right Product Hero Area */
+.bubble.tooltip.find {
+	margin-left: -60px;
+}
+
+.tooltip.bubble .payload {
+	padding: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	background: #5d5c5c;
+	color: #fff;
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+	white-space: normal;
+	box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+	-moz-box-shadow: 0 0 5px #000;
+}
+
+.bubble p {
+	font-size: 9px;
+}
+
+.tooltip.bubble .pointer {
+	background: url("/common/images/global/lg-global-sprite.png") 18px -754px no-repeat;
+	height: 17px;
+    width: 42px;
+
+	margin-top: -1px;
+}
+
+/* IE does a terrible job w/ the flip filter, so just use an image. */
+.ie .tooltip.bubble .pointer.flip-horizontal {
+	filter: none;
+	background-position: -33px -754px;
+}
+
+/* smaller font for info bubbles in filters, or help messages in the head..? */
+.filter .tooltip,
+.head-tooltips .tooltip {
+	font-size: 9px;
+}
+
+
+/* Social sharing module, can be found on many pages including Category */
+.share {
+	position: relative;
+	float: right;
+	margin: 5px 20px 0 0;
+}
+
+.share h4 {
+	float: left;
+	font-size: 10px;
+	color: #666;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/* on the flagship page this margin contributes to the heihgt of the dotted border and it looks bad */
+.social-share .share h4 {
+	margin-top: 0;
+}
+
+.share a.ir {
+	float: left;
+	background: url("/common/images/global/lg-global-sprite.png") 0 -588px no-repeat;
+	height: 29px;
+	width: 20px;
+	overflow: hidden;
+	display: block;
+	margin-left: 12px;
+}
+
+.share a.twitter {
+	background-position: -30px -588px;
+}
+
+.share a.g-plus {
+	background-position: -60px -588px;
+}
+
+#share {
+	width: 200px;
+	margin-left: -48px;
+}
+
+#share .payload {
+	height: 140px;
+}
+
+.share-send-top #share{
+	top: 50px;
+	}
+
+#share h5 {
+	padding: 0px 0 6px;
+	color: #D80546;
+	font-size: 15px;
+}
+
+#share li {
+	list-style-type: none;
+	margin-top: 4px;
+}
+
+/* I believe this UI element is only on a single page, a potential candidate for off-loading out of lg.css */
+.social-share.share-send-top {
+	float: right;
+}
+
+.share-send-top .share {
+	float:left;
+}
+.share-send-top h4 {
+	float: none;
+	margin-bottom: 2px;
+}
+
+.share-send-top {
+	float: left;
+}
+
+.share-send-top a {
+	margin-left: 0;
+}
+
+.share-send-top .last {
+	margin-right: 0;
+}
+
+.share-send-top .send-icons {
+	float: left;
+}
+
+.share-send-top .share.send {
+	border-right: dotted 1px #ccc;
+	margin-right: 0;
+	padding-right: 16px;
+}
+
+/** Send Toolbar. **/
+div.send{
+	float: left;
+}
+
+#send_mobile,
+#send_email {
+	top: 55px;
+	width: 255px;
+/*	they are positioned "bottom-left" but offset slightly back towards the
+	right so that their right-aligned arrows are just below the hotspot.	*/
+	margin-left: 30px;
+}
+
+#send_mobile label.tel{
+	display: inline;
+}
+
+#send_email label.email{
+	margin-bottom: 0;
+}
+
+.preview-off{
+	margin-top: 15px;
+}
+
+.preview-on{
+	display: none;
+	margin-top: 15px;
+	margin-bottom: 8px;
+}
+
+.preview-details{
+	height: 35px;
+	width: 175px;
+	border: 1px solid #cccccc;
+	padding: 15px;
+	margin-bottom: 7px;
+	background: #ffffff;
+}
+
+.preview-details span{
+	display: block;
+	clear: both;
+}
+
+.preview-details a{
+	float: right;
+	margin-top: -12px;
+}
+
+span.preview {
+	font-size: 8px;
+	color: #5d5c5c;
+	text-transform: uppercase;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.tooltip h5{
+	font-size: 16px;
+	color: #D80546;
+}
+
+.tooltip p,
+.tooltip {
+	font-size: 10px;
+}
+
+.tooltip button {
+	display: inline;
+}
+
+.tooltip. button.small{
+	padding: 3px;
+}
+
+#send_mobile button,
+#send_email button {
+	margin-top: 0px;
+	margin-left:4px;
+	vertical-align: middle;
+}
+
+.tooltip label{
+	margin-bottom: 15px;
+	display: block;
+}
+
+.tooltip label.last {
+	margin-bottom: 0px;
+}
+
+.tooltip label.left{
+    margin-left: -5px;
+    margin-top: 10px;
+    width: 120px;
+}
+
+.tooltip label span.btn{
+	text-transform: uppercase;
+	font-size: 9px;
+}
+
+.tooltip form {
+	display: block;
+	margin-top: 20px;
+	padding-bottom:12px;
+}
+
+.tooltip form a{
+	color: #C70752;
+}
+
+.tooltip form span.req{
+	font-style: italic;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.tooltip input{
+	margin: 0;
+}
+
+input.three{
+	width: 30px;
+}
+
+input.four{
+	width: 45px;
+}
+
+#send_email input,
+#send_email textarea{
+	display: block;
+	clear: both;
+	width: 210px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#send_email input{
+	width: 205px;
+}
+
+#send_email textarea{
+	margin-bottom: 0;
+}
+
+.send a.ir {
+	float: left;
+	background: url("/common/images/global/lg-global-sprite.png") 0 -629px no-repeat;
+	height: 29px;
+	width: 20px;
+	overflow: hidden;
+	display: block;
+}
+
+.send a.email {
+	background-position: -30px -629px;
+}
+
+.send a.print {
+	background-position: -61px -629px;
+	width: 24px;
+}
+
+/*  Support & Quick Links Tooltips  */
+button.support{
+	font-size: 11px;
+	margin-left: 20px;
+	margin-right: 15px;/*Right Aligned with Share Icons above*/
+}
+
+/* this tooltip needs to be bumped way to the left so that it doesn not exceed the 960px wrapper,
+   which would result in it causing horizontal scrollbars if the window is just big enough for the page. Created class Right for a tooltip that needs to be aligned this way.*/
+#tooltip-support.right {
+	margin-left: -80px;
+}
+
+#tooltip-support.right .pointer {
+	margin-left: 192px;
+}
+
+#tooltip-support a,
+#tooltip-tools a{
+	color: #5d5c5c;
+}
+
+#tooltip-support ul,
+#tooltip-tools ul {
+	list-style: none outside none;
+    margin: 0 auto;
+}
+
+#tooltip-support li,
+#tooltip-tools li{
+    line-height: 14px;
+    margin: 4px;
+    padding-left: 12px;
+}
+
+#tooltip-support,
+#tooltip-tools {
+    width: 278px;
+}
+
+#tooltip-support .tooltip a.close,
+#tooltip-tools .tooltip a.close{
+	position: relative;
+	top: -10px;
+	right: -10px;
+}
+
+/* "At A Glance" tooltip. */
+.tooltip.glance {
+	margin-left: -30px;/*Center tooltip above product article elements*/
+    width: 318px;
+}
+
+.glance .payload .product-classes{
+	width: 250px;
+}
+
+.glance .payload .product-classes.full-name{
+	float: left;
+}
+
+.glance .payload .model-num{
+	float: left;
+	font-size: 16px;
+	margin-top: 5px;
+	margin-right: 15px;
+	margin-bottom: 5px;
+	font-weight: normal;
+	font-family:"BryantLGRegular";
+}
+
+.glance .payload ul.ratings{
+	margin-top: 5px;
+	width: 100px;
+	float: left;
+}
+
+.glance .ratings li{
+	margin: 0;
+}
+
+.glance .payload p{
+	clear: both;
+	font-size: 11px;
+	margin-bottom: 0;
+}
+
+.glance .payload ul.features{
+	list-style: none outside none;
+	margin-top: 5px;
+	padding: 0;
+}
+
+.glance .payload ul.features li{
+	background: url("/common/images/global/lg-global-sprite.png") no-repeat scroll 0 -155px transparent;
+	padding-left: 10px;
+	margin-bottom: 0;
+}
+
+.glance .payload label{
+	margin-top: 15px;
+	float: left;
+	width: 180px;
+	text-transform: uppercase;
+}
+
+.glance span.btn.selected{
+	margin-right: 75px;
+}
+
+/*Validation Styles*/
+
+.num-error{
+	display: none;
+	color: #D80546;
+	font-weight: bold;
+	position: absolute;
+	margin-top: -5px;
+}

@@ -1,0 +1,401 @@
+body {
+	background: none;
+	margin-bottom:50px;
+	float:left;
+}
+
+.registration {
+	margin: 0;
+	width: 460px;
+}
+
+.registration > li {
+	display: none;
+}
+
+.registration > li:first-child {
+	display: block;
+}
+
+.steps h5 {
+	font-weight: 700;
+	text-transform: none;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline;
+	vertical-align: middle;
+}
+
+.steps {
+	margin: 2px 0 0 0;
+}
+
+form{
+	margin-top: 10px;
+}
+
+.steps label {
+	clear: left;
+    display: block;
+    font-weight: bold;
+    padding-top: 10px;
+    margin-left: 25px; /*To line up with the rest of the form elements that have been indented*/
+}
+
+ol.steps {
+	list-style: none;
+}
+
+.steps li {
+	background-color: #f2f2f2;
+	visibility: hidden;
+	padding:10px;
+}
+
+.steps li:first-child {
+	background-color: transparent;
+	visibility: visible;
+	padding:0px;
+}
+
+.steps i {
+	font-size: 10px;
+	font-style: italic;
+	margin-left: 58px;
+	vertical-align: bottom;
+}
+
+.ie7 .steps i {
+	margin-left: 50px;
+}
+
+.category {
+	clear: both;
+	padding: 0px;
+}
+
+.category a {
+	display: block;
+	float: left;
+
+	padding: 106px 10px 10px 10px;
+	width: 120px;
+
+	margin-left: 12px;
+	border: 1px solid #999;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+
+	/* todo: change URL */
+	background: #999 url("/common/images/register.png") no-repeat scroll 0 0;
+}
+
+.category a:first-child {
+	margin-left: 0;
+}
+
+.category a.active {
+	border-color: #d80546;
+	background-color: #d80546
+}
+
+a.appliances {
+	background-position: -144px 0;
+}
+
+a.computer {
+	background-position: -288px 0;
+}
+
+.link-list a {
+	padding-left: 5px;
+	margin-left: 5px;
+	border-left: 1px solid #858484;
+	font-size: 10px;
+	font-family: "BryantLGRegular";
+	text-transform: uppercase;
+}
+
+.link-list a:first-child {
+	padding-left: 0;
+	margin-left: 0;
+	border-left: none;
+}
+
+.link-list a.active {
+	color: #d80546;
+}
+
+.multi select {
+	width: 165px;
+	height: 150px;
+	float: left;
+	font-size: 12px;
+}
+
+.multi .styled-input {
+	width: 180px;
+	margin-top: 5px;
+	margin-left: 25px; /*To line up with the rest of the form elements that have been indented*/
+	clear: left;
+	background-color: #fff;
+}
+
+.multi .styled-input {
+	height: auto;
+}
+
+.multi .styled-input input {
+	padding: 0;
+	width: 174px;
+	margin: 3px;
+	height: 14px;
+}
+
+.multi button {
+	float: left;
+	clear: none;
+}
+
+#image {
+	background-color: #fff;
+	margin-left: 34px;
+	display: none;
+}
+
+.image-block {
+	float: none;
+	clear: none;
+}
+
+/*.rows {
+	padding: 20px 10px;
+	background-color: #eee;
+	border-radius: 7px;
+}
+
+.rows li {
+	clear: left;
+}
+
+.rows li > div {
+	float: left;
+	width: 330px;
+}
+
+.rows li > div.col-a {
+	width: 116px;
+	margin-left: 0;
+	margin-top: 6px;
+	white-space:nowrap;
+}
+
+.rows span {
+	margin-top: 5px;
+	margin-right: 3px;
+	float: left;
+}
+
+.rows span.middle {
+	margin-top: 10px;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+/* Regular Form styles */
+
+
+.form-area {
+	padding: 20px 10px;
+	background-color: #eee;
+	border-radius: 7px;
+}
+
+.form fieldset{
+	padding: 20px 10px;
+	background-color: #eee;
+	border-radius: 7px;
+}
+
+.form input[type="text"],.form input[type="date"],.form input[type="email"],.form input[type="tel"],.form input[type="number"] {
+	width:130px;
+	height:20px;
+	background:#FFFFFF;
+	border:1px solid #cccccc;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:10px;
+	padding-left:5px;
+	font-weight:normal;
+	color:#5d5c5c;
+	margin-right:0px;
+	margin-left:5px;
+}
+
+.form input.x-large{
+	width:180px;
+}
+.form input.large{
+	width:160px;
+}
+
+.form input.small{
+	width:100px;
+}
+.form input.x-small{
+	width:20px;
+}
+
+.form label{
+	margin:6px 0;
+}
+.form label span.single{
+	width:114px;
+	
+}
+.form label.indent-single{
+	margin-left:124px;
+	
+}
+.form label span{
+	margin-right:4px;
+}
+.form label span.middle{
+	margin-top:5px;
+	
+}
+
+.form label.with-select{
+	width:170px;	
+}
+.form label.full{
+	width:100%;
+}
+
+
+/* many overrides to make the form eleemnts line up neatly, wow. */
+.styled-input {
+	background-color: #fff;
+	margin-bottom: 3px;
+}
+
+.styled-input.x-large {
+	width: 277px;
+}
+.styled-input.x-large input {
+	width: 274px;
+}
+
+.styled-input.large {
+	width: 168px;
+}
+.styled-input.large input {
+	width: 165px;
+}
+
+.styled-input.medium {
+	width: 120px;
+}
+.styled-input.medium input {
+	width: 117px;
+}
+
+.styled-select.medium {
+	width: 185px;
+	margin-left:5px;
+}
+.lt-ie9 .styled-select.medium {
+	width: 180px;
+	float:left;
+}
+
+.styled-select.medium select {
+	width: 205px;
+}
+
+.lt-ie9 .styled-select.medium select {
+	width: 180px;
+}
+
+.styled-input.small {
+	
+}
+.styled-input.small input {
+	width:72px;
+}
+
+.styled-input.x-small {
+	width: 20px;
+	/* margin, just because it doesn't have the "required" asterisk in front */
+	margin-left: 7px;
+}
+.styled-input.x-small input {
+	width: 17px;
+}
+
+.legend {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.legend span { /* for IE7 */
+	float: left;
+}
+
+mark {
+	float: left;
+	margin-right: 2px;
+	margin-top: 5px;
+	font-weight: 300;
+	background-color: transparent;
+	color: #d4043f;
+}
+
+mark.example {
+	float: right;
+	margin: 0 3px 0 0;
+}
+
+/* this is kind of a mess but needed for IE7 */
+
+/*label {
+	float: left;
+	clear: left;
+	margin-left: 8px;
+	width: 285px;
+}*/
+
+label input {
+	float: left;
+}
+
+
+label.long {
+	margin-left: 25px;
+}
+.ie7 label.long {
+	margin-left: 0;
+}
+
+label.long input[type="checkbox"] + span::before {
+	margin-left: -17px;
+}
+
+.hotspot {
+	float: left;
+	margin-top: 10px;
+	margin-left: 6px;
+	cursor: help;
+}
+
+.thank-you a {
+	color: #d80546;
+}

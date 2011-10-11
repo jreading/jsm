@@ -1,0 +1,553 @@
+.carousel {
+	position: relative;
+	width: 960px;
+	height: 165px;
+	overflow: hidden;
+	float: left;
+	padding: 20px 0px;
+	margin: 0 auto;
+}
+
+.carousel ul {
+	position: absolute;
+	display: none;
+	width: 10000px;
+	left: 0px;
+	margin-left: 30px;
+	z-index: 0;
+	-webkit-transition: all .8s ease-in-out;
+	-moz-transition: all .8s ease-in-out;
+}
+
+.carousel3 ul{
+	margin-left: 0;
+}
+
+.carousel li {
+	position: relative;
+	float: left;
+	display: inline;
+	width: 300px;
+	margin-left: 4px;
+}
+
+.carousel li a.img-link:link,
+.carousel li a.img-link:visited {
+	display: block;
+	float: left;
+	width: 130px;
+	margin-right: 10px;
+	text-align: center;
+}
+
+/* safari 5.0.5 seems to have a slight bug in priority, this is not necessary in 5.1.  */
+.carousel li a.img-link:hover {
+	text-decoration: none;
+}
+
+.carousel ul ul {
+	position: relative;
+	display: block;
+	width: auto;
+	margin-left: 0px;
+}
+
+.carousel ul ul li {
+	display: block;
+	float: none;
+	width: auto;
+	height: auto;
+	margin-left: 0px;
+}
+
+.carousel-arrow-left, .carousel-arrow-right {
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	background: #fff;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.carousel-arrow-right {
+ 	right: 0px;
+}
+
+.carousel-arrow-left {
+	/* changed from margin to padding because the previous last element was leaking through and could be hovered over to activate its tooltip */
+	padding-right: 9px;
+}
+
+.carousel-arrow-right {
+	margin-left: 9px;
+}
+
+.carousel-arrow-left.disabled a {
+	background-position: 0 -243px;
+}
+
+.carousel-arrow-right.disabled a {
+	background-position: -23px -243px;
+}
+
+.carousel-arrow-right.disabled a:hover,
+.carousel-arrow-left.disabled a:hover {
+	cursor: default;
+}
+
+.carousel-arrow-left a, .carousel-arrow-right a {
+	display: block;
+	width: 21px;
+	height: 22px;
+	margin-top: 100px;
+	overflow: hidden;
+	background: url("/common/images/global/lg-global-sprite.png") no-repeat 0 -215px;
+	text-indent: -9999px;
+}
+
+.carousel-arrow-right a {
+	background-position: -23px -215px;
+}
+
+.carousel .content {
+	float: left;
+	width: 160px;
+	padding: 4px 0 0;
+	padding-bottom: 10px;
+	font-size: 10px;
+}
+
+.carousel .content h3 {
+	white-space: nowrap;
+	font-size: 15px;
+}
+
+.carousel .content p a, ul.ratings a {
+	color: #D80546;
+}
+
+.carousel .content .button {
+	margin-left: 12px
+}
+
+.carousel .content ul.ratings {
+	height: 14px;
+	margin: 6px 0;
+}
+
+.carousel .content ul.ratings li {
+	float: left;
+	display: block;
+	width: 15px;
+	height: 14px;
+	margin: 0 1px 0 0;
+}
+
+
+.carousel .content a {
+	color: #C70752;
+}
+
+.carousel-mask {
+    float: left;
+    height: 100%;
+    left: 22px;
+    overflow: hidden;
+    position: absolute;
+    width: 95%;
+}
+
+.pane-wrapper {
+	position:relative;
+	width:361px;
+	height:217px;
+	border:1px solid #ccc;
+	margin:0 auto;
+}
+.pane.active {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: all .5s ease-in-out;
+}
+
+.pane {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all .5s ease-in-out;
+}
+
+
+/*
+ *
+ * Carousel style overrides
+ *
+ */
+
+/* Carousel 2 */
+.carousel2 {
+	height: 315px;
+	overflow: hidden;
+}
+
+.carousel2 h2 {
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+.carousel2 ul {
+	margin-left: 60px;
+}
+
+.carousel2 ul li {
+	width: 940px;
+	height: 340px;
+	margin-left: 0px;
+}
+
+.carousel2 .carousel-arrow-right a, .carousel2 .carousel-arrow-left a {
+	margin-top: 150px;
+}
+
+.carousel2 .content {
+	width: 420px;
+	font-size: 12px;
+	float: left;
+}
+
+.carousel2 .twit-name strong {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.carousel2 .twit-feed {
+	padding-right: 60px;
+	background: url("/common/images/global/lg-global-sprite.png") no-repeat 370px -470px;
+}
+
+.carousel2 .button-row {
+	float: left;
+	width: 100%;
+	padding-top: 25px;
+}
+
+	.lt-ie9 .carousel2 .button-row a.button.small{
+		margin-left: -80px;
+	}
+
+.carousel2 .button-row .twitter-button {
+	float: left;
+}
+
+.carousel2 .button-row .facebook-recommend {
+	float: left;
+	padding-bottom: 6px;
+	margin-left: 13px;
+}
+
+.carousel2 h3 {
+	font-size: 24px !important;
+	padding-top: 5px;
+	padding-bottom: 17px;
+	color: #D80546;
+}
+
+.carousel2 p {
+	margin-bottom: 0;
+	line-height: 18px;
+}
+
+.carousel2 image {
+	float: left;
+}
+
+.carousel2 .content a.button {
+	font-size: 11px;
+	color: #fff;
+	float: right;
+	margin-right: 25px;
+}
+
+/* Carousel 3 */
+
+.carousel3 {
+	height: 77px;
+	width: 950px;
+	padding-top: 0px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.carousel3 ul li {
+	cursor: pointer;
+	width: 180px;
+	text-align: center;
+	padding-bottom: 20px;
+	background: url("/common/images/global/lg-global-sprite.png") no-repeat -102px -480px;
+	-webkit-transition: all .3s ease-in-out;
+}
+
+.carousel3 ul li.active {
+	background: url("/common/images/global/lg-global-sprite.png") no-repeat -102px -494px;
+	-webkit-transition: all .3s ease-in-out;
+}
+
+.carousel3 .carousel-arrow-right a, .carousel3 .carousel-arrow-left a {
+	margin-top: 30px;
+}
+
+.carousel3 .carousel-arrow-right, .carousel3 .carousel-arrow-left {
+	background: none;
+}
+
+.carousel3 .carousel-arrow-left {
+	margin-left: 12px;
+}
+
+.carousel3 .carousel-arrow-left a, .carousel3 .carousel-arrow-right a {
+	width: 9px;
+	height: 14px;
+	background: url("/common/images/global/lg-global-sprite.png") no-repeat 0 -722px;
+}
+
+.carousel3 .carousel-arrow-right a {
+	background-position: -9px -722px;
+}
+
+.carousel3 .carousel-arrow-left.disabled a{
+	background-position: 0px -736px;
+}
+
+.carousel3 .carousel-arrow-right.disabled a{
+	background-position: -9px -736px;
+}
+
+/* Carousel 4 */
+
+.carousel4 {
+	height: 302px;
+	width: 960px;
+	padding: 0px;
+}
+
+.carousel4 ul {
+	margin-left: 0px;
+}
+
+.carousel4 ul li{
+	width: 961px;
+	height: 304px;
+	margin: 0px;
+	background: url("/us/images/promos/find-bg1.jpg");
+}
+
+.carousel4 .carousel-arrow-right, .carousel4 .carousel-arrow-left {
+	float: none;
+	position: absolute;
+	background: none;
+}
+
+.carousel4 .carousel-arrow-right {
+	top: 160px;
+	left: 870px;
+}
+
+.carousel4 .carousel-arrow-left {
+	top: 160px;
+	left: 820px;
+}
+
+.carousel4 .carousel-arrow-left a, .carousel4 .carousel-arrow-right a {
+	width: 50px;
+	height: 20px;
+	background: #e01b50;
+	text-indent: 0px;
+	line-height: 20px;
+	color: #fff;
+	font-size: 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+}
+
+.carousel4 .copyArea {
+	position: relative;
+	top: 20px;
+	left: 50px;
+}
+
+.carousel4 .copyArea h2 {
+	color: #e01b50;
+	font-size: 30px;
+	font-weight: normal;
+	text-transform: uppercase;
+	border: 0px;
+}
+
+.carousel4 .copyArea h3 {
+	font-size: 20px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.carousel4 .indicator ul, .indicator label {
+	float: left;
+	line-height: 14px;
+}
+
+.carousel4 .indicator {
+	margin-top: 12px;
+	margin-left: 12px;
+}
+
+.carousel4 .indicator ul li {
+	float: left;
+	width: 14px;
+	height: 14px;
+	margin: 0px 2px;
+	padding: 0px;
+	line-height: 14px;
+	text-align: center;
+	font-size: 8px;
+	background: #c5c5c5;
+	list-style: none;
+	color: #fff;
+}
+
+.carousel4 .indicator ul li.active {
+	background: #e33434;
+}
+
+.carousel4 .question {
+ 	position: absolute;
+	top: 100px;
+	left: 200px;
+ }
+
+.carousel4 .question ul li {
+	font-family: "BryantLGregular";
+	list-style: none;
+	margin: 12px;
+ }
+
+.carousel4 .question ul li span {
+ 	display: block;
+	float: left;
+	width: 12px;
+	height: 12px;
+	background: #c5c5c5;
+	margin-right: 8px;
+ }
+
+.carousel4 .question ul li.active span {
+	background: #e33434;
+}
+
+/* Carousel 5 */
+
+.carousel5 {
+	width: 424px;
+	height: 60px;
+	margin:0 auto;
+	float: none;
+}
+
+.carousel5 ul {
+	margin-left: 0px;
+	padding-left: 4px;
+}
+
+.carousel5 li {
+	width: 50px;
+	height: 37px;
+	background: #ccc;
+}
+.carousel5 li.active {
+	background: #D80546;
+}
+.carousel5 li img {
+	margin: 1px;
+}
+
+.carousel5 .carousel-arrow-left a, .carousel5  .carousel-arrow-right a {
+	margin-top: 30px;
+}
+
+/* Carousel 6 */
+
+.carousel6 {
+	width: 100%;
+	margin-top: 10px;
+	height: 60px;
+	padding: 0;
+}
+
+.carousel6 ul {
+	margin-left: 0;
+}
+
+.carousel6 li {
+	width: 230px;
+}
+
+.carousel6 li a.img-link:link, .carousel6 li a.img-link:visited, .carousel6 .content {
+	width: 100px;
+	margin-right: 0;
+}
+
+.carousel6 .carousel-arrow-left a, .carousel6 .carousel-arrow-right a {
+	margin-top:20px;
+}
+
+.carousel6 li .content {
+	clear: none;
+}
+
+.carousel6 .carousel-mask {
+	float: left;
+	width: 95%;
+	height: 100%;
+	left: 26px;
+	overflow: hidden;
+	position: absolute;
+}
+
+/* Carousel 7 */
+.carousel7 {
+	margin-top: 30px;
+	padding: 0;
+	height: 105px;
+}
+
+.carousel7 ul{
+	margin-left: 2px;
+}
+
+.carousel7 .carousel-arrow-left, .carousel7 .carousel-arrow-right{
+	height: 165px;
+	top: -55px;
+}
+
+.carousel7 li {
+	height: 105px;
+	width: 178px;
+	float: left;
+}
+
+.carousel7 li .background-wrapper {
+	height: 105px;
+	width: 175px;
+	background: #F6F6F5;
+	float: left;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.carousel7 li span {
+	font-family: Arial;
+	font-size: 10px;
+	color: #5D5C5C;
+	display: block;
+	text-align: center;
+}

@@ -1,0 +1,69 @@
+/* Tabs and panels for the TabPanel component. */
+.tabpanel {
+	position: relative;
+	overflow: hidden;
+
+	/* this must come to the same outer width as the '.tabpanel article' */
+	width: 960px;
+}
+
+/* the nav floats over and slightly overlaps the panels
+   to hide the panel's top border directly under the active tab. */
+.tablist {
+	border-bottom: 1px solid #ccc;
+	background: #f8f8f8;
+}
+
+.tab {
+	position: relative;
+	top: 1px;
+
+	display: block;
+	float: left;
+
+	padding: 12px 17px;
+	border: 1px solid transparent;
+	border-bottom: none;
+
+	background-color: transparent;
+	color: #5d5c5c;
+	text-transform: uppercase;
+	font-family: "BryantLGMedium", Arial, Helvetica, sans-serif; /* full tag needed for dynamic widths in FF */
+	outline: none;
+}
+
+.tab.active,
+.tab.active:active {
+	color: #d80546;
+	background-color: #f1f1f2;
+	border-color: #ccc;
+	border-bottom-color: transparent;
+	text-decoration: none;
+	cursor: default;
+}
+
+.panels {
+	left: 0;
+	position: relative;
+	width: 999em;
+	height:auto;
+	overflow: hidden;
+}
+
+.tabpanel.slide .panels.animate {
+	-webkit-transition: left .3s ease-in-out,  height .3s ease-in-out .3s,  min-height .3s ease-in-out .3s;
+	-moz-transition: left .3s ease-in-out,  height .3s ease-in-out .3s,  min-height .3s ease-in-out .3s;
+}
+
+.panel {
+	float: left;
+
+	height: auto;
+	min-height: 1px;
+	/* The width must be the same as the '.tabpanel' width */
+	width: 960px;
+
+	/* IE8 has issues with clipping during
+	   panel transitions without this.  */
+	overflow: hidden;
+}

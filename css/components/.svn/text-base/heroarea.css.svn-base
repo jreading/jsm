@@ -1,0 +1,725 @@
+#hero-area{
+	position:relative;
+	width:960px;
+	height:420px;
+	overflow:hidden;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #cccccc;
+	font-family: "BryantLGMedium", Arial, Helvetica, sans-serif; /* full tag needed for dynamic widths in FF */
+}
+
+#hero-area.tab {
+	height: 456px;
+	margin-bottom: 20px;
+}
+
+/* Removed for now - Hero images will have white space at top
+#hero-area.nav .hero {
+	margin-top:55px;
+}
+*/
+
+#hero-area .tabs{
+	position:absolute;
+	bottom:-160px;
+	cursor:pointer;
+	font-size:11px;
+	-webkit-transition:bottom .7s ease-in-out 1.3s;
+	-moz-transition:bottom .7s ease-in-out 1.3s;
+	-ms-transition:bottom .7s ease-in-out 1.3s;
+}
+
+#hero-area .tabs div{
+	position:relative;
+	top:0px;
+	width:291px;
+	height:168px;
+	padding:0px;
+	float:left;
+	padding:14px;
+	margin-left:-1px;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border-right:1px dotted #cccccc;
+	border-left:1px solid #cccccc;
+
+	-webkit-transition: top .5s ease-in,  opacity .5s linear,border-top-left-radius .5s ease-in, border-top-right-radius .5s ease-in, box-shadow .5s linear;
+	-moz-transition: top .5s ease-in,  opacity .5s linear,border-top-left-radius .5s ease-in, border-top-right-radius .5s ease-in, box-shadow .5s linear;
+	-ms-transition: top .5s ease-in,  opacity .5s linear,border-top-left-radius .5s ease-in, border-top-right-radius .5s ease-in, box-shadow .5s linear;
+
+	background: #fff;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, rgb(255, 255, 255)),
+		color-stop(0.25, rgb(243, 241, 241))
+	);
+	background: -moz-linear-gradient(
+		center top,
+		rgb(255, 255, 255) 0%,
+		rgb(243, 241, 241) 25%
+	);
+}
+
+#hero-area .tabs div.active {
+	top: -160px;
+	z-index: 10;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	-webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+	border-right:1px solid #cccccc;
+	border-left:1px solid #cccccc;
+
+	-webkit-transition: top .5s ease-out,  opacity .5s linear,border-top-left-radius .5s ease-out,border-top-right-radius .5s ease-out, box-shadow .5s linear;
+	-moz-transition: top .5s ease-out,  opacity .5s linear,border-top-left-radius .5s ease-out,border-top-right-radius .5s ease-out, box-shadow .5s linear;
+	-ms-transition: top .5s ease-out,  opacity .5s linear,border-top-left-radius .5s ease-out,border-top-right-radius .5s ease-out, box-shadow .5s linear;
+
+	/* first, a straight gradient from top to bottom */
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f3f2f1)); /* Saf4+, Chrome */
+	background: -webkit-linear-gradient(top, #fff, #f3f2f1); /* Chrome 10+, Saf5.1+ */
+	background:    -moz-linear-gradient(top, #fff, #f3f2f1); /* FF3.6 */
+	background:     -ms-linear-gradient(top, #fff, #f3f2f1); /* IE10 */
+	background:      -o-linear-gradient(top, #fff, #f3f2f1); /* Opera 11.10+ */
+	background:         linear-gradient(top, #fff, #f3f2f1);
+	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#f3f2f1'); /* IE6–IE9 */*/
+	/* then, color stops w/ opacity where supported */
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0.83, rgba(255, 255, 255, 0.95)),
+		color-stop(1, rgba(242, 241, 241, 0.95))
+	);
+	background: -moz-linear-gradient(
+		center top,
+		rgba(255, 255, 255, 0.95) 83%,
+		rgba(242, 241, 241, 0.95) 100%
+	);
+}
+
+.ie9 #hero-area .tabs div.active, .lt-ie9 #hero-area .tabs div.active{
+	background:#f3f2f1;
+}
+
+#hero-area .tabs div .plusminus{
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	width:8px;
+	height:9px;
+	left:12px;
+	top:16px;
+	cursor:pointer;
+	background:url("/common/images/global/lg-global-sprite.png") 0 -128px no-repeat;
+}
+
+#hero-area .tabs div.active .plusminus{
+	background-position: 0px -137px;
+}
+
+#hero-area .tabs div .xout{
+	display:none;
+	margin:0px;
+	padding:0px;
+	position:absolute;
+	width:16px;
+	height:16px;
+	cursor:pointer;
+	right:12px;
+	top:12px;
+	background:url("/common/images/global/lg-global-sprite.png") 0 -174px no-repeat;
+}
+
+#hero-area .tabs div.active .xout{
+	display:block;
+}
+
+#hero-area .tabs ul {
+	list-style: none;
+	width:250px;
+	margin:0 auto;
+}
+
+#hero-area .tabs li {
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+#hero-area .tabs h3 {
+	padding-left:12px;
+	text-transform:uppercase;
+	color:#5d5c5c;
+	font-size:12px;
+	margin-bottom:10px;
+	cursor:pointer;
+}
+
+#hero-area .tabs p {
+	padding-left:15px;
+}
+
+#hero-area .tabs a:link, #hero-area .tabs a:visited {
+	color:#D80546;
+}
+
+#hero-area .tabs .cta-link {
+	float:right;
+}
+
+#hero-area .tabs close-link {
+	clear:both;
+	position:absolute;
+	bottom:0px;
+	right:20px;
+	line-height:12px;
+	background:url("/common/images/global/lg-global-sprite.png") top right no-repeat;
+	padding-right:18px;
+}
+
+#hero-area .tabs .close-link a:link, #hero-area .tabs .close-link a:visited {
+	color:#727272;
+}
+
+/* No longer need last -tab declerations
+#hero-area .tabs div.last-tab {
+	border-right:none;
+}
+*/
+
+/**
+ * 	HERO AREA PANELS (.hero)
+ */
+.hero {
+	display:none;
+	position:absolute;
+	background-repeat: no-repeat;
+	float:left;
+	top:0px;
+	width:960px;
+	height:456px;
+	-webkit-transition:opacity 3s linear .1s;
+	-moz-transition:opacity 3s linear .1s;
+	-ms-transition:opacity 3s linear .1s;
+}
+
+.hero.heroform{
+	-webkit-transition:opacity .5s linear .1s;
+	-moz-transition:opacity .5s linear .1s;
+	-ms-transition:opacity .5s linear .1s;
+}
+
+.hero img {
+	border: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	cursor: pointer;
+}
+
+.hero.inactive {
+	left: -1000px;
+	opacity: 0;
+}
+
+.hero.active {
+	left: 0px;
+	opacity: 1;
+}
+
+.hero div.imagearea {
+	position:absolute;
+	font-family: "BryantLGMedium", Arial, Helvetica, sans-serif; /* full tag needed for dynamic widths in FF */
+	text-align:right;
+	padding:18px;
+	-webkit-border-radius: 7px;
+}
+
+.headline-wrapper{
+	overflow:hidden;
+	text-align:left;
+}
+
+
+.hero .herocopy-wrapper{
+	white-space:nowrap;
+	overflow:hidden;
+	float:left;/*Fix rightside alignment in IEs and incorrect alignment in webkit SV23 09122011*/
+	text-align:left;
+	margin-top:4px;
+	padding-bottom: 5px;
+}
+
+.hero .callout-wrapper {
+	float: none;
+	text-align: left;
+	padding-top: 26px;
+	text-transform: uppercase;
+}
+
+.hero .callout-wrapper p{
+	font-family:'BryantLGMedium';
+	margin-bottom:5px;
+}
+
+.hero .callout-wrapper ul{
+	list-style: none;
+	margin:0 auto;
+}
+
+.hero .callout-wrapper li{
+	background:url("/common/images/global/lg-global-sprite.png") -274px -142px no-repeat;
+	color:#D80546;
+	margin:4px;
+	padding-left:12px;
+	line-height:14px;
+}
+
+.hero .callout-wrapper li a{
+	text-align:left;
+	text-decoration:none;
+	color:#D80546;
+	font-size:14px;
+}
+
+.hero .callout-wrapper li a:hover{
+	text-align:left;
+	text-decoration:underline;
+	color:#D80546;
+}
+
+.hero h2 {
+	font-weight:normal;
+	font-size: 28px;
+	color:#D80546;
+	margin:0px;
+	padding:0px;
+	line-height:30px;
+	letter-spacing:-1px;
+}
+
+.hero h2 span {
+	color:#D80546;
+}
+
+.hero p {
+	font-size:11px;
+	margin-top:-30px;
+	-webkit-transition:all 1s ease-in .1s;
+	-moz-transition:all 1s ease-in .1s;
+	-ms-transition:all 1s ease-in .1s;
+}
+
+.hero.brighttext p {
+	color:#ccc;
+}
+
+.hero .button {
+	/* ALL hero buttons align to the left now. */
+	float: left;
+
+	-webkit-transition: opacity .5s linear 2s,
+	                    -webkit-box-shadow .3s linear,
+						text-shadow .3s linear;
+	   -moz-transition: opacity .5s linear 2s,
+	                    -webkit-box-shadow .3s linear,
+					    text-shadow .3s linear;
+	    -ms-transition: opacity .5s linear 2s,
+		                -webkit-box-shadow .3s linear,
+						text-shadow .3s linear;
+	opacity: 0;
+}
+
+.hero.heroform .button{
+	-webkit-transition: opacity .5s linear .6s,
+	                    -webkit-box-shadow .3s linear,
+						text-shadow .3s linear;
+	   -moz-transition: opacity .5s linear .6s,
+	                    -webkit-box-shadow .3s linear,
+					    text-shadow .3s linear;
+	    -ms-transition: opacity .5s linear .6s,
+		                -webkit-box-shadow .3s linear,
+						text-shadow .3s linear;
+}
+
+.hero h2 {
+	-webkit-transition:margin-left 1s ease-in-out .1s,opacity 1s linear .1s;
+	-moz-transition:margin-left 1s ease-in-out .1s,opacity 1s linear .1s;
+	text-align:left;
+	white-space:nowrap;
+}
+
+.hero.inactive h2 {
+	margin-left:286px;
+	opacity:0;
+}
+
+.hero.active h2{
+	margin-left:0px;
+	opacity:1;
+}
+.lt-ie9 .hero.active h2 {
+	margin-right: 15px;/*For some reason IE did not want to left align the H2s on the first slide with the other text. This fixes that SV21 09122011*/
+}
+
+.hero.active p {
+	margin: 0;
+	-webkit-transition: margin-top 1s ease-in-out .6s;
+	   -moz-transition: margin-top 1s ease-in-out .6s;
+	    -ms-transition: margin-top 1s ease-in-out .6s;
+}
+
+.hero.heroform.active p {
+	-webkit-transition: margin-top .3s ease-in-out .3s;
+	   -moz-transition: margin-top .3s ease-in-out .3s;
+	    -ms-transition: margin-top .3s ease-in-out .3s;
+}
+
+.hero.active .button{
+	opacity: 1;
+}
+
+#indicator, #hero-nav {
+	position:absolute;
+	top:12px;
+	left:12px;
+	cursor:pointer;
+}
+
+#indicator ul li {
+	float:left;
+	margin:2px;
+	padding:0px;
+	width:12px;
+	height:12px;
+	line-height:12px;
+	text-align:center;
+	-webkit-border-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	font-size:8px;
+	background:#c5c5c5;
+	list-style:none;
+	color:#fff;
+}
+
+#hero-nav {
+	position:relative;
+	width:100%;
+	top: 0;
+	left: 0;
+	height: 55px;
+	padding-left: 15px;
+	cursor: pointer;
+	background: -moz-linear-gradient(top,#DEDEDE,white 45px);
+	background: -webkit-gradient(linear,0 0,0 45,from(#ECECEC),to(white));
+	background-repeat: no-repeat;
+}
+
+#hero-nav ul li {
+	float: left;
+	margin: 2px;
+	padding: 0;
+	height: 20px;
+	margin-top: 20px;
+	margin-bottom: 15;
+	padding-right: 10px;
+	margin-right: 10px;
+	font-size: 14px;
+	list-style: none;
+	color: #5D5C5C;
+	border-right: 1px dotted #444;
+}
+
+	#hero-nav span.indicator-number{
+		float:left;
+		padding:0px;
+		margin-top: -2px;
+		margin-right: 5px;
+		width:16px;
+		height:16px;
+		line-height:14px;
+		text-align:center;
+		-webkit-border-radius: 9px;
+		border-top-left-radius: 9px;
+		border-top-right-radius: 9px;
+		border-bottom-left-radius: 9px;
+		border-bottom-right-radius: 9px;
+		font-size:8px;
+		border: 1px solid #666;
+		list-style:none;
+		color:#666;
+		font-weight: bold;
+		font-family: Arial;
+		font-size: 10px;
+	}
+	
+	#hero-nav li.active span.indicator-number {
+		background:#D30E43;
+		border: 1px solid #D30E43;
+		color: #fff;
+	}
+
+#indicator ul li.active{
+	background:#e33434;
+}
+
+.hero .callout-wrapper {
+	clear: left;
+	text-align: left;
+	padding-top: 26px;
+	text-transform: uppercase;
+}
+
+#hero-nav ul li.active, #hero-nav ul li:hover {
+	cursor: pointer;
+	color: #D80546;
+}
+
+#hero-nav .button {
+	position: absolute;
+	right: 40px;
+	top: 15px;
+}
+
+/*Find The Right TV Hero Area*/
+#hero-area.find{
+	height: 325px;
+	background: #fff;	
+	background-image: linear-gradient(bottom, #ECECEC 0%, #ffffff 25%, #ffffff 75%, #ECECEC 100%);
+	background-image: -o-linear-gradient(bottom, #ECECEC 0%, #ffffff 25%, #ffffff 75%, #ECECEC 100%);
+	background-image: -moz-linear-gradient(bottom, #ECECEC 0%, #ffffff 25%, #ffffff 75%, #ECECEC 100%);
+	background-image: -webkit-linear-gradient(bottom, #ECECEC 0%, #ffffff 25%, #ffffff 75%, #ECECEC 100%);
+	background-image: -ms-linear-gradient(bottom, #ECECEC 0%, #ffffff 25%, #ffffff 75%, #ECECEC 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ECECEC), color-stop(0.25, #ffffff), color-stop(0.75, #ffffff), color-stop(1, #ECECEC));
+	background-repeat: no-repeat;
+	padding-bottom: 25px;
+}
+
+#hero-area.find .hero{
+	height: 325px;
+}
+
+	.lt-ie9 #hero-area.find .hero{
+		background: #fff;
+	}
+		
+	#hero-area.find h1 {
+		position: absolute;
+		top: 35px;
+		left: 60px;
+		z-index:1;
+	}
+	
+	#hero-area.find .headline-wrapper {
+		width:100%;		
+	}
+	
+	#hero-area.find h3 {
+		text-transform: none;
+		font-size: 18px;
+		color: #D80546;
+	}
+	
+	#hero-area.find .hero p{
+		font-size: 12px;
+		font-family: Arial;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		color: #666666;
+	}
+	
+	#hero-area.find .hero p.no-pad{
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+
+#hero-area.find #hero-nav{
+	background: none;
+	top: 70px;
+	left: 60px;
+	padding-left: 0;
+}
+
+	#hero-area.find #hero-nav ul li{
+		border-right: 0;
+		text-transform: uppercase;
+		font-size: 11px;
+	}
+
+#hero-area.find .hero img.step{
+	position: relative;
+	float: left;
+	margin-right: 30px;
+}
+
+#hero-area.find .options{
+	float: left;
+	text-align: left;
+}
+
+	#hero-area.find .options label{
+		text-align: left;
+		padding-top:5px;
+		padding-bottom: 5px;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: auto;
+		color: #5d5c5c;
+		background: #fff; /* Old browsers */
+		background: -moz-linear-gradient(bottom, #ececec, white 13px);
+		background: -webkit-linear-gradient(bottom, #ececec, white 13px);
+		-webkit-box-shadow: none;
+	   	-moz-box-shadow: none;
+	    box-shadow: none;
+		border: 1px solid #ccc;
+		text-transform: uppercase;
+	}
+	
+	.lt-ie9 #hero-area.find .options label{
+		padding:2px;
+	}
+	
+		#hero-area.find .options label.red{
+			color: #fff;
+			background: #d30e43; /* Old browsers */
+			background: -webkit-gradient(
+				linear,
+				left top,
+				left bottom,
+				color-stop(0%, #cc0033),
+				color-stop(48%, #e00e47),
+				color-stop(53%, #d30e43),
+				color-stop(100%, #c70e40)
+			); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(
+				top,
+				#cc0033 0%,
+				#e00e47 48%,
+				#d30e43 53%,
+				#c70e40 100%
+			);
+		}
+		
+		#hero-area.find .options label.left{
+			margin-right: 5px;
+		}
+		
+	#hero-area.find legend{
+		float: left;
+		margin-right: 5px;
+    	margin-top: 5px;
+    	font-family: Arial;
+    }
+
+#hero-area.find .find-controls{
+	position: absolute;
+	width: 215px;
+	top: 160px;
+	right: 10px;
+}
+	#hero-area.find .find-controls.two-btn{
+		width: 150px;
+	}
+	
+	#hero-area.find .find-controls a.button{
+		margin-right: 10px;
+	}
+		#hero-area.find .find-controls a.button.white{
+			color: #D80546 !important;/*Unique case button text color override*/
+			margin-right: 10px;
+		}
+	
+	#hero-area.find .find-controls.right{
+		left: 400px;
+	}
+
+#hero-area.find .models-found{
+	background: url("/common/images/global/models-foundBG.png");
+	height: 177px;
+	width: 252px;
+	text-align: center;
+	font-size: 18px;
+	font-family:'BryantLGRegular';
+	text-transform: uppercase;
+}
+	#hero-area.find .models-found span.models-number{
+		display: block;
+		font-size: 90px;
+		font-weight: bold;
+	}
+	
+#hero-area.find .price-slider{
+	width: 415px;
+	height: 0px;
+	font-family: Arial;
+	font-size: 10px;
+	clear: left;
+	padding-top: 10px;
+}
+	#hero-area.find .price-slider ul{
+		clear: both;
+	}
+	
+	#hero-area.find .price-slider ul li{
+		float: left;
+		height: 17px;
+		margin-right: 30px;
+		margin-bottom: 0px;
+		vertical-align: text-top;
+		background: url("/common/images/global/lg-global-sprite.png") 15px -954px transparent no-repeat;
+	}
+	
+		#hero-area.find .price-slider ul li.last,
+		#hero-area.find .price-slider ul.type li.last{
+			margin-right: 0;
+		}
+	
+		#hero-area.find .price-slider ul li:first-child{
+			margin-left: 15px;
+			background-position: 5px -954px;
+		}
+		
+	#hero-area.find .price-slider ul.type{
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+		
+		#hero-area.find .price-slider ul.type li{
+			margin-top: 3px;
+			margin-right: 120px;
+			background: none;
+		}
+			
+			#hero-area.find .price-slider ul.type li:first-child{
+				margin-left: 30px;
+			}
+	
+	#hero-area.find .price-slider .slider{
+		float: left;
+		width: 415px;
+		height: 5px;
+		background: #ccc;
+	}
+		#hero-area.find .price-slider .slider span{
+			width: 57px;
+			height: 5px;
+			display: block;
+			float: left;
+			background: #ccc;
+			-moz-transition: all 0.5;
+			-webkit-transition: all 0.5;
+		}
+			#hero-area.find .price-slider .slider span.fill{
+				background: #D30E43;
+				-moz-transition: all 0.5;
+				-webkit-transition: all 0.5;
+			}
+		
+			#hero-area.find .price-slider .slider span:first-child{
+				margin-left: 20px;
+			}

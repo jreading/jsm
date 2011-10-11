@@ -1,0 +1,38 @@
+.psearch-results {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: auto;
+	background: #fff;
+	z-index: 9999;
+	border: 1px solid #ccc;
+	border-top:0px;
+}
+.psearch-results li {
+	clear: left;
+	margin: 0px;
+	padding: 0px;
+}
+.psearch-results span {
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	padding: 0px;
+	margin: 0px;
+}
+.psearch-results span:first-child {
+	float: left;
+	width: 50%;
+}
+.psearch-results a:link, .psearch-results a:visited {
+	display: block;
+	font-weight: bold;
+	padding: 3px 6px;
+	color: #5D5C5C !important;
+	width: auto;
+	text-decoration: none;
+}
+.psearch-results li:hover a {
+	background: #f2f2f2;
+	color: #D80546 !important;
+}

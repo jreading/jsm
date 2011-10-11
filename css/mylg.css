@@ -1,0 +1,259 @@
+#hero-area,
+.hero{
+	height: 300px;
+	border-bottom: 0;
+}
+/*
+article .col a, article .col a:active, article .col a:visited,
+.block6 a, .block6 a:active, .block6 a:visited {
+	color: #D80546;
+}
+*/
+
+.module{
+	padding-left: 20px;
+	font-size: 11px;
+}
+
+hr.small{
+	width: 40%;
+}
+
+a.sign-out{
+	font-size: 11px;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+
+.wallpaper-img{
+	float: left;
+	padding-right: 15px;
+}
+
+#hero-area.mylg .pad-bottom{
+	margin-bottom:18px !important;
+}
+
+.tabpanel .tablist {
+    padding-left: 50px;
+}
+
+.tabpanel .panel {
+    padding: 20px 46px 0;
+}
+
+#wallpaper-details {
+    margin-bottom: 40px;
+}
+
+/*Sign In*/
+
+.module.sign-in{
+	height: 400px;
+}
+
+.module.sign-in button{
+	margin-top: 15px;
+}
+
+.form label{
+	font-size: 11px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.form .utils{
+	padding-top: 12px;
+	margin-left: 175px;
+}
+	.form .utils a{
+		padding-left: 5px;
+		margin-right: 5px;
+		border-left: 1px solid #ccc;
+	}
+	
+		.form .utils a:first-child{
+			padding-left: 0;
+			border: 0;
+		}
+/*Registration*/
+
+.registration label{
+	margin-bottom: 20px;
+}
+
+
+/*Forgot*/
+
+.aform.forgot{
+	margin-bottom: 75px;
+}
+
+	.aform.forgot button{
+		margin-top: 0px;
+	}
+
+/*to lg.css?*/
+
+.form input {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC;
+    color: #5D5C5C;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    height: 20px;
+    margin-right: 0;
+    padding-left: 5px;
+    width: 157px;
+}
+
+div.col.col3{
+	padding-left:42px;
+}
+
+div.col.col3 ul{
+	padding-top:40px;
+}
+div.col.col3 ul li{
+	margin-bottom:0;
+}
+.block6 .image-area{
+	float:left;
+}
+
+.block6 .copy-area{
+	width:242px;
+	
+}
+
+.block.block6 img, .block.block6 .copy-area{
+	padding-top:0;
+}
+
+.view-all{
+	text-transform:uppercase;
+	background: url("/common/images/global/lg-global-sprite.png") no-repeat scroll 0 -530px transparent;
+	padding-left:11px;
+}
+.view-all.pad-right{
+	padding-right:0;
+	margin-right:94px !important;
+}
+.panel .view-all.pad-right{
+	padding-right:0;
+	margin-right:140px !important;	
+}
+
+.module h1{
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+.my-lg.breadcrumbs{
+margin:30px 0 35px 20px;
+}
+
+.module h4{
+font-size: 14px;
+text-transform: uppercase;
+}
+
+.module .col1{
+clear: left;
+padding-left: 20px;
+font-size: 11px;
+}
+.module .col1 .copy-area,
+.module .col1 .image-area{
+	float: left;
+	padding-left: 40px;
+}
+
+.module .col1 .copy-area h2{
+	color: #D80546;
+	font-weight: bold;
+}
+
+.module .col1 .copy-area a{
+	margin-bottom: 10px;
+}
+
+.module .col1 .image-area{
+	margin-top: -50px;
+}
+
+.profile-pic{
+	height: 166px;
+	width: 166px;
+	float: left;
+	margin-right: 20px;
+}
+
+button.avatar{
+	margin-top: 140px;
+}
+
+.my-profile-link{
+	margin-top: 20px;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+	.my-profile-link a{
+		float: left;
+		display: block;
+		margin-top: 12px;
+		margin-right: 10px;
+		color: #333333;
+	}
+	
+.module.profile .col1,
+.module.profile .col2 {
+	margin-top: 30px;
+	border: 0;
+	font-size: 12px;
+}
+
+.module.profile .col1 {
+	width: 220px;
+}
+
+.module.profile .col2 {
+	width: 320px;
+}
+
+.module.profile .input-value,
+.module.profile input{
+	display: block;
+	clear: both;
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+	
+
+.product-data{
+	display: block;
+	clear: both;
+}
+
+.block7{
+	float: none;
+	clear: both;
+	width: 350px
+}
+	.block7 a{
+		color: #D80546;
+	}
+	
+	.block7 img{
+		padding-top: 0;
+	}
+	
+	.block7 .copy-area,
+	.block7 .image-area{
+		padding-top: 0;
+	}
+	
+	.block7 .copy-area{
+		width: 250px;
+	}

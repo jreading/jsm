@@ -1,0 +1,350 @@
+/*#search-page a, #search-page a:visited {
+	color: #d80546;
+}*/
+
+/*#search-page*/ p {
+	margin: 0.3em 0;
+}
+
+.thumbs-up {
+	background: url("/common/images/global/lg-global-sprite.png") 0 -984px no-repeat;
+	height: 35px;
+	width: 36px;
+}
+
+/* I only use the id selector here in case the
+   order of the CSS includes gets changed. */
+/*#search-page*/ .accordion-item {
+	padding: 0;
+	width: auto;
+	border-top: none;
+	border-bottom: none;
+}
+
+/*#search-page*/ .accordion.primary > .accordion-item {
+	border-top: 1px dotted #ccc;
+}
+
+/*#search-page*/ .accordion-item:first-child {
+	border-top: none;
+}
+
+/*#search-page*/ .accordion label {
+	margin: 20px 0;
+	width: auto;
+}
+
+/*#search-page*/ .arrow {
+	margin-bottom: 20px;
+}
+
+/* the top-level of the nested accordions */
+#search-page .accordion label {
+	color: #5d5d5c;
+}
+
+/* the second-level of the nested accordions */
+/*#search-page*/ .arrow label {
+	text-transform: none;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/*#search-page*/ .arrow .accordion-content {
+	font-size: 11px;
+}
+
+.accordion-content {
+	position: relative;
+}
+
+/*#search-page*/ .accordion label.active {
+	color: inherit;
+}
+
+/*#search-page*/ .accordion h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-transform: none;
+	padding: 10px 0;
+	border-top: 1px dotted #ccc;
+	cursor: default;
+}
+
+#search-page .square {
+	margin-top: 0;
+
+}
+
+.criteria {
+	font-weight: 700;
+	margin: 4px 0;
+}
+
+.review {
+	border-top: 1px dotted #ccc;
+	padding: 20px 0;
+}
+
+.review div {
+	float: left;
+	width: 128px;
+}
+
+.review .thumbs-up {
+	float: left;
+	margin-right: 10px;
+}
+
+.review a {
+	color: #db1652;
+}
+
+/*#search-page*/ h1 {
+	padding-left: 0;
+	text-transform: uppercase;
+	font-size: 22px;
+	margin-bottom: 25px;
+	vertical-align: text-bottom;
+}
+
+/*#search-page*/ h1 span {
+	color: inherit;
+	font-size: 87%;
+}
+
+/*#search-page*/ h1 b {
+	font-size: 113%;
+}
+
+/*  this is why i hate browser overrides..       *
+ *  don't like doing all this pixel stuff here   *
+ *  but these aren't inline elements, we can't   *
+ *  just align them vertically.. :(              */
+.styled-input, .lt-ie9 .styled-input {
+	width: 290px;
+	height: 23px;
+	margin-top: 1px;
+}
+.lt-ie9 .styled-input {
+	margin-top: 3px;
+}
+
+.styled-input input, .lt-ie9 .styled-input input {
+	width: 100%;
+}
+
+label.checkbox {
+	clear: left;
+	float: left;
+}
+
+.tabpanel button, .tabpanel .button {
+	font-size: 10px;
+
+	float: none;
+	margin-top: 10px;
+	margin-left: 0;
+	padding: 2px 5px;
+
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+#search_submit {
+	clear: none;
+	float: left;
+}
+
+#learn_more {
+	clear: none;
+	display: block;
+	float: left;
+	margin: 1px 10px;
+	color: #fff;
+}
+
+.row p, .row button, .row a {
+	text-align: left;
+
+	display: block;
+	clear: left;
+
+	/* ie7 is getting float:right for some crazy reason */
+	float: left !important;
+}
+
+#search-page label {
+	display: block;
+	font-size: 11px;
+}
+
+#search-page form label {
+	margin: 10px 0 25px;
+}
+
+#search-page form button,
+.featured button {
+	padding: 3px 5px;
+	margin-top: 2px;
+}
+
+#search-page .panels {
+	padding-bottom: 10px;
+}
+
+.tabpanel, .panel {
+	width: 740px;
+	font-size: 11px;
+}
+
+/* featured product */
+.featured.row {
+	padding: 12px 0 20px;
+	border-top: none;
+}
+
+.featured img {
+	/* dimensions specified in markup */
+	float: left;
+}
+
+a.title {
+	color: #db1652;
+	font-size: 15px;
+	font-family: "BryantLGMedium";
+	line-height: normal;
+	margin-bottom: 4px;
+}
+
+a.model h3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin: 4px 0;
+	color: #5d5c5c;
+	font-weight: 600;
+}
+
+.featured a.model:hover {
+	color: #5d5c5c;
+}
+
+.details {
+	float: left;
+}
+
+ul.features {
+	clear: left;
+	margin: 10px 0 30px;
+	width: 540px;
+}
+
+ul.features li {
+	float: left;
+	width: 270px;
+}
+
+/* need to override the "pointer" from accordion labels */
+ul.features label {
+	cursor: inherit;
+}
+
+.details p {
+	float: left;
+}
+
+.featured button {
+	margin-left: 20px;
+}
+/* end featured product */
+
+#search-page .grid {
+	margin-top: 20px;
+}
+
+#search-page .grid .shim {
+	min-height: 240px;
+	width: 740px;
+	float: none;
+	margin-bottom: 25px;
+}
+
+#search-page .grid .content-pages > li {
+	width: 740px;
+}
+
+.grid h4 {
+	color: #5d5c5c;
+	font-weight: 700;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	float: left;
+}
+
+.row {
+	width: 100%;
+	padding: 10px 0;
+
+	border-top: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+
+.row:first-child {
+	border-top: none;
+}
+
+.thumb {
+	float: left;
+	/* dimensions specified in markup */
+}
+
+.row h2 {
+	margin-top: 10px;
+	text-align: left;
+	color: #d80546;
+	font: 12px Arial, Helvetica, sans-serif normal;
+}
+
+.other {
+	margin: 20px 0 35px;
+}
+
+.other h4 {
+	float: none;
+}
+
+.other article {
+	margin-top: 20px;
+}
+
+.other a, .row a {
+	color: #d80546;
+}
+
+.glance.tooltip {
+	margin-top: -5px;
+}
+
+/* support panel */
+.supportage.row {
+}
+
+.supportage.row img {
+	display: block;
+	float: left;
+	padding:0 30px;
+}
+
+.supportage.row h2 {
+	font-size: 147%;
+}
+
+.supportage.row .details a,
+.supportage.row .details p {
+	float: left;
+	clear: left;
+}
+.column1 nav {
+	padding:0px 20px;
+}
