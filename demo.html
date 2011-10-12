@@ -1,43 +1,43 @@
 <!doctype html>  
 <html class="no-js" lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, chrome=1">
-		
-		<title>JsModuleBP Demo</title>
-		<meta name="title" content="">
-		<meta name="description" content="">
-		<meta name="keywords" content="">
-		<meta name="author" content="">
-		<script type="text/javascript">
-			curl = {
-			        paths: {
-			            modules: 'js/modules/',
-			            libs: 'js/libs/'
-			        }
-			};
-		</script>
-		<script type="text/javascript" src="js/libs/curl.js"></script>
-		<script type="text/javascript">
-			curl(['modules/mymodule'], function(mymodule){
-				jsmbp.init();
-			});
-		</script>
-	</head>
-
-	<body>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, chrome=1">
 	
-		<div id="container">
-			<header>
-			    <!-- HEADER -->
-			</header>
-			<div id="main">
-			    <!-- MAIN CONTENT -->
-			</div>
-			<footer>
-			    <!-- FOOTER -->
-			</footer>
+	<title>JsModuleBP Demo</title>
+	<meta name="title" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<script type="text/javascript">
+		curl = {
+		        paths: {
+		            modules: 'js/modules/',
+		            libs: 'js/libs/'
+		        }
+		};
+	</script>
+	<script type="text/javascript" src="js/libs/curl.js"></script>
+	<script type="text/javascript">
+		curl(['modules/mymodule'], function(mymodule){
+			jsmbp.init();
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="container">
+		<header>
+		    <!-- HEADER -->
+		</header>
+		<div id="main">
+		    <!-- MAIN CONTENT -->
 		</div>
-	  
-	</body>
+		<footer>
+		    <!-- FOOTER -->
+		</footer>
+	</div>
+  
+</body>
 </html>
