@@ -1,0 +1,48 @@
+<!doctype html>  
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7, IE=9, chrome=1">
+
+  <title>JsModuleBP Demo</title>
+  <meta name="title" content="">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+<script type="text/javascript">
+	curl = {
+        paths: {
+            modules: 'js/modules/',
+            libs: 'js'
+        }
+    };
+</script>
+
+  <script type="text/javascript" src="js/curl.js"></script>
+  <script type="text/javascript">
+  	
+	curl(['modules/mymodule'], function(mymodule){
+
+		jsmbp.init();
+	
+	});
+  </script>
+
+</head>
+
+<body lang="en">
+
+  <div id="container">
+    <header>
+
+    </header>
+    <div id="main">
+      
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+  
+</body>
+</html>
