@@ -1,4 +1,4 @@
-define(['libs/rClass'],function(rClass){
+define(['js/Class'],function(Class){
 	
 	/**
 	 * Module

@@ -1,4 +1,4 @@
-define(['libs/Module'],function(Module) {
+define(['js/Module'],function(Module) {
 
 	jsmbp.MyModule = jsmbp.Module.extend({
 
