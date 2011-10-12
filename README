@@ -2,6 +2,9 @@ JSBoilerPlate
 
 A simple Class-based, AMD compliant module setup. 
 
+Class.js based off Resig's Simple Javascript Inheritence: 
+http://ejohn.org/blog/simple-javascript-inheritance/
+
 Thanks to:
 * Adam Abouraya <Adam.Abouraya@icrossing.com>
 * Arne G Strout <arne.strout@icrossing.com>
