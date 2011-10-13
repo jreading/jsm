@@ -33,7 +33,7 @@ http://ejohn.org/blog/simple-javascript-inheritance/
 
 ----------------------------------------
 
-Thanks goes to...
+### Thanks goes to...
 
 These guys (whether they know it or not):
 
