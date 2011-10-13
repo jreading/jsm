@@ -5,6 +5,18 @@ A simple Class-based, AMD compliant module setup.
 
 ----------------------------------------
 
+### What it is:
+
+A starter kit for creating AMD modules for UI interactions and browser utils. 
+
+----------------------------------------
+
+### How it works:
+
+Demos, etc.
+
+----------------------------------------
+
 ### More info:
 
 Modular Js:
