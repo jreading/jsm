@@ -26,10 +26,11 @@ Thanks goes to...
 These guys (whether they know it or not):
 
   * Adam Abouraya
-  * Arne G Strout
-  * Jonathan Zuckerman
+  * Arne Strout
   * Bret Crosby
+  * Jonathan Zuckerman
   * Sasha Sklar
+  * Todd Driscoll
 
 And these guys (they don't know it):
 
