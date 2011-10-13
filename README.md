@@ -17,6 +17,20 @@ Demos, etc.
 
 ----------------------------------------
 
+### What's included:
+
+#### JSMBP API
+
+* method1
+* method2
+
+#### Module API
+
+* method1
+* method2
+
+----------------------------------------
+
 ### More info:
 
 Modular Js:
