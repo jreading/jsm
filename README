@@ -5,7 +5,17 @@ A simple Class-based, AMD compliant module setup.
 Class.js based off Resig's Simple Javascript Inheritance: 
 http://ejohn.org/blog/simple-javascript-inheritance/
 
-Thanks to:
-* Adam Abouraya <Adam.Abouraya@icrossing.com>
-* Arne G Strout <arne.strout@icrossing.com>
-* Jonathan Zuckerman <jonathan.zuckerman@icrossing.com>
+Thanks goes to...
+
+These guys (whether they know it or not):
+* Adam Abouraya 
+* Arne G Strout 
+* Jonathan Zuckerman 
+* Bret Crosby
+* Sasha Sklar
+
+And these guys (they don't know it):
+* Alex Sexton
+* Brian Cavalier
+* John Hann
+* John Resig
