@@ -51,16 +51,8 @@ http://ejohn.org/blog/simple-javascript-inheritance/
 
 These guys (whether they know it or not):
 
-  * Adam Abouraya
-  * Arne Strout
-  * Bret Crosby
-  * Jonathan Zuckerman
-  * Sasha Sklar
-  * Todd Driscoll
+  Adam Abouraya, Arne Strout, Bret Crosby, Jonathan Zuckerman, Sasha Sklar, Todd Driscoll
 
 And these guys (they don't know it):
 
-  * Alex Sexton
-  * Brian Cavalier
-  * John Hann
-  * John Resig
+  Alex Sexton, Brian Cavalier, John Hann, John Resig
