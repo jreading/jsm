@@ -19,7 +19,7 @@
 	</script>
 	<script type="text/javascript" src="js/libs/curl.js"></script>
 	<script type="text/javascript">
-		curl(['modules/mymodule'], function(mymodule){
+		curl(['modules/mymodule', 'modules/othermodule'], function(mymodule,othermodule){
 			jsmbp.init();
 		});
 	</script>
@@ -32,6 +32,9 @@
 		</header>
 		<div id="main">
 		    <!-- MAIN CONTENT -->
+			
+			<div id="mymodule1" class="mymodule" data-debug="true">My Module 1</div>
+			<div id="mymodule2" class="othermodule">My Module 2</div>
 		</div>
 		<footer>
 		    <!-- FOOTER -->

@@ -25,15 +25,29 @@ define(['js/Class'],function(Class){
 			this.log('component init', this.options, this.element);
 		},
 		/**
-		 * pubsub
+		 * publish
 		 *
-		 * Used to publish or subscribe to events from
-		 * or to modules.
+		 * Used to publish custom events.
 		 */
-		pubsub: function(el, ev, mode){
-			$(el).trigger(ev)
+		publish: function(ev, el) {
+			$el = !el ? $('html') : $(el);
+			$el.trigger(ev);
+			
+			this.log('publish', ev, el);
 		},
-		
+		/**
+		 * subscribe
+		 *
+		 * Used to subscribe to events from other modules.
+		 */
+		subscribe: function(ev, callback, el, args) {
+			$el = !el ? $('html') : $(el);
+			$el.bind(ev, function(e){
+				callback(args)
+			});
+			
+			this.log('subscribe', ev, callback, el);
+		},
 		/**
 		 * log
 		 *
