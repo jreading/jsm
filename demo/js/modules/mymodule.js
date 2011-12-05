@@ -29,7 +29,7 @@ define(['js/Module'],function(Module) {
 			this.subscribe('click',this.doThatThing,'.othermodule', [this, 'Other Module was clicked!']);
 			this.subscribe('transitionend webkitTransitionEnd',this.doThatOtherThing,'.othermodule',[this, 'Other Module is finshed transitioning!']);
 			
-			this.log('Build complete.', $(this.element).data());
+			this.log('My Module build complete.', $(this.element).data());
 		},
 		doThatThing: function(args) {
 			$(args[0].element).append('<div id="msg1">'+args[1]+'</div>');

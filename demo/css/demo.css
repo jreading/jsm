@@ -1,5 +1,5 @@
 body {
-	background: #666;
+	background: #999b9b;
 	font-family: "Arial", Arial, sans-serif;
 	font-size: 18px;
 	color: #fff;	
@@ -31,9 +31,9 @@ h2 {
 	-moz-border-radius: 18px;
 	border-radius: 18px;
 
-	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 	
 	padding: 20px;
 
@@ -51,9 +51,9 @@ h2 {
 		#c70e40 100%
 	); /* Chrome10+,Safari5.1+ */
 	
-	-webkit-transition: all .5s ease-in-out;
-	   -moz-transition: all .5s ease-in-out;
-	        transition: all .5s ease-in-out;
+	-webkit-transition: all .8s ease-in-out;
+	   -moz-transition: all .8s ease-in-out;
+	        transition: all .8s ease-in-out;
 }
 
 .module.active {
