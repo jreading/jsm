@@ -13,7 +13,7 @@ A starter kit for creating AMD modules for UI interactions and browser utils.
 
 ### How it works:
 
-Demos, etc.
+look at the [demo](demo/demo.html). 
 
 ----------------------------------------
 
