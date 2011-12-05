@@ -32,6 +32,7 @@ define(['js/Class'],function(Class){
 		publish: function(ev, el) {
 			$el = !el ? $('html') : $(el);
 			$el.trigger(ev);
+			console.log(ev)
 		},
 		/**
 		 * subscribe

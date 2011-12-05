@@ -4,6 +4,7 @@ define(['js/Module'],function(Module) {
 
 		options: {
 			//options here
+			actionevent: 'mouseover'
 		},
 	
 		/**
@@ -19,11 +20,12 @@ define(['js/Module'],function(Module) {
 	
 		_build: function(){
 			this.log('Build complete.', this.options);
-			$(this.element).bind('click',$.proxy(function(){
+			$(this.element).bind(this.options.actionevent,$.proxy(function(){
 				this.toggleHeight();
 			},this));
 			this.subscribe('transitionend webkitTransitionEnd',this.showMessage,'.mymodule', [this, 'My Module is finshed transitioning!']);
-		}, 
+			this.subscribe('MyModuleBuilt',this.showMessage,'.mymodule', [this, 'My Module is built!']);
+			}, 
 		showMessage: function(args) {
 			$(args[0].element).append('<div id="msg2">'+args[1]+'</div>');
 		},

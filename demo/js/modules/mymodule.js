@@ -4,6 +4,7 @@ define(['js/Module'],function(Module) {
 
 		options: {
 			//options here
+			
 		},
 	
 		/**
@@ -25,7 +26,6 @@ define(['js/Module'],function(Module) {
 				$(this).removeClass('active');
 			});
 			
-			this.publish('MyModuleBuilt',this.element);
 			this.subscribe('click',this.doThatThing,'.othermodule', [this, 'Other Module was clicked!']);
 			this.subscribe('transitionend webkitTransitionEnd',this.doThatOtherThing,'.othermodule',[this, 'Other Module is finshed transitioning!']);
 			
