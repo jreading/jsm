@@ -26,10 +26,10 @@ define(['js/Module'],function(Module) {
 			});
 			
 			this.publish('MyModuleBuilt',this.element);
-			this.subscribe('click',this.doThatThing,'.othermodule', [this, 'Other Module is was clicked!']);
+			this.subscribe('click',this.doThatThing,'.othermodule', [this, 'Other Module was clicked!']);
 			this.subscribe('transitionend webkitTransitionEnd',this.doThatOtherThing,'.othermodule',[this, 'Other Module is finshed transitioning!']);
 			
-			this.log('Build complete.', this.options);
+			this.log('Build complete.', $(this.element).data());
 		},
 		doThatThing: function(args) {
 			$(args[0].element).append('<div id="msg1">'+args[1]+'</div>');
