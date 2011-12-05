@@ -21,8 +21,8 @@ Demos, etc.
 
 #### JSMBP API
 
-* method1
-* method2
+* init (returns void): use this function to initialize any global/non-modular helpers (lazy loaders, cookies, page tracking, etc.)
+* plugin (returns function): binds the module to a specific element. Use 'html' as the element, if the module is not bound to an UI element.
 
 #### Module API
 
