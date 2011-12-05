@@ -4,6 +4,7 @@ define(['js!libs/jquery.min.js'],function() {
 
 		init: function(){
 			
+			console.log("JsMBp Registered Modules",jsmbp.RegisteredModules);
 		},
 		/**
 		 * jQuery plugin bridge.
