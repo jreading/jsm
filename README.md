@@ -16,7 +16,7 @@ A starter kit for creating AMD modules for UI interactions and browser utils.
 AMD modules are loaded and bound to UI elements. Data attributes are used to set options for each module instance. 
 The JsMBp uses a registered module object to store instance references.  
 
-For an example, look at the [demo](demo/). 
+For an example, look at the [demo](https://github.com/jreading/JsModuleBoilerplate/demo/). 
 
 ----------------------------------------
 
