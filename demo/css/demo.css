@@ -1,20 +1,32 @@
-body{
-	background: #333;
+body {
+	background: #666;
+	font-family: "Arial", Arial, sans-serif;
+	font-size: 18px;
+	color: #fff;	
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.45);
+}
+
+h1, h2 {
+	margin: 8px;
+	clear: left;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 20px;
 }
 
 .module {
-	width: 200px;
-	height: 120px;
+	width: 500px;
+	min-height: 200px;
+	height: auto;
 	float: left;
 	margin: 20px;
 
 	vertical-align: text-top;
-	font-family: "Arial", Arial, sans-serif;
-	font-size: 18px;
 	text-align: center;
-	color: #fff;
 
-	border: 0px;
+	border: 1px solid #173650;
 	-webkit-border-radius: 18px;
 	-moz-border-radius: 18px;
 	border-radius: 18px;
@@ -23,9 +35,7 @@ body{
 	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 	
-	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.45);
-
-	padding: 8px;
+	padding: 20px;
 
 	background: -webkit-linear-gradient(
 		top,
@@ -40,4 +50,16 @@ body{
 		#d30e43 53%,
 		#c70e40 100%
 	); /* Chrome10+,Safari5.1+ */
+	
+	-webkit-transition: all .5s ease-in-out;
+	   -moz-transition: all .5s ease-in-out;
+	        transition: all .5s ease-in-out;
+}
+
+.module.active {
+	width:400px;
+}
+
+.module.tall {
+	padding-bottom:200px;
 }

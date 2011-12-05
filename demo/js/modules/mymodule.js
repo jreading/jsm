@@ -18,17 +18,24 @@ define(['js/Module'],function(Module) {
 		},
 	
 		_build: function() {
+			
+			$(this.element).bind('mouseenter',function(){
+				$(this).addClass('active');
+			}).bind('mouseleave',function(){
+				$(this).removeClass('active');
+			});
+			
 			this.publish('MyModuleBuilt',this.element);
-			this.subscribe('click',this.doThatThing,'.othermodule', $(this.element));
-			this.subscribe('activetransitioncomplete',this.doThatOtherThing,'.othermodule');
+			this.subscribe('click',this.doThatThing,'.othermodule', [this, 'Other Module is was clicked!']);
+			this.subscribe('transitionend webkitTransitionEnd',this.doThatOtherThing,'.othermodule',[this, 'Other Module is finshed transitioning!']);
 			
 			this.log('Build complete.', this.options);
 		},
 		doThatThing: function(args) {
-			console.log("yeah, that thing happend",args)
+			$(args[0].element).append('<div id="msg1">'+args[1]+'</div>');
 		},
 		doThatOtherThing: function(args) {
-			console.log("yeah, that other thing happend",args)
+			$(args[0].element).append('<div id="msg1">'+args[1]+'</div>');
 		}
 	});
 	
