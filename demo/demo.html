@@ -32,8 +32,14 @@
 		<div id="main">
 		    <!-- MAIN CONTENT -->
 			
-			<div id="mymodule1" class="module mymodule" data-debug="true">My Module 1</div>
-			<div id="mymodule2" class="module othermodule">My Module 2</div>
+			<div id="mymodule1" class="module mymodule" data-debug="true">
+				<h2>My Module</h2>
+				<p>This module has the debug option set to true and subscribes to the 'click' event of "Other Module" and publishes 'transitionEnd'</p>
+			</div>
+			<div id="mymodule2" class="module othermodule">
+				<h2>Other Module</h2>
+				<p>This module subscribes to the 'transitionEnd' event of "My Module" and publishes 'click'</p>
+			</div>
 		</div>
 		<footer>
 		    <!-- FOOTER -->

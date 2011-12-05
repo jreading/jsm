@@ -13,7 +13,7 @@ A starter kit for creating AMD modules for UI interactions and browser utils.
 
 ### How it works:
 
-AMD modules are loaded and bound to UI elements. Data attrbutes are used to set options for each module instance. 
+AMD modules are loaded and bound to UI elements. Data attributes are used to set options for each module instance. 
 The JsMBp uses a registered module object to store instance references.  
 
 For an example, look at the [demo](demo/). 
