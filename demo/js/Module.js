@@ -38,9 +38,11 @@ define(['js/Class'],function(Class){
 		 *
 		 * Used to subscribe to events from other modules.
 		 */
-		subscribe: function(ev, callback, el) {
+		subscribe: function(ev, callback, el, args) {
 			$el = !el ? $('html') : $(el);
-			$el.bind(ev, callback);
+			$el.bind(ev, function(e){
+				callback(args)
+			});
 		},
 		/**
 		 * log

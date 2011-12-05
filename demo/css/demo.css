@@ -1,0 +1,43 @@
+body{
+	background: #333;
+}
+
+.module {
+	width: 200px;
+	height: 120px;
+	float: left;
+	margin: 20px;
+
+	vertical-align: text-top;
+	font-family: "Arial", Arial, sans-serif;
+	font-size: 18px;
+	text-align: center;
+	color: #fff;
+
+	border: 0px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+
+	-webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+	
+	text-shadow: 0 2px 2px rgba(0, 0, 0, 0.45);
+
+	padding: 8px;
+
+	background: -webkit-linear-gradient(
+		top,
+		#347797 0%,
+		#347797 53%,
+		#173650 100%
+	);
+	background: -moz-linear-gradient(
+		top,
+		#347797 0%,
+		#e00e47 48%,
+		#d30e43 53%,
+		#c70e40 100%
+	); /* Chrome10+,Safari5.1+ */
+}
