@@ -21,13 +21,25 @@ Demos, etc.
 
 #### JSMBP API
 
-* init (returns void): use this function to initialize any global/non-modular helpers (lazy loaders, cookies, page tracking, etc.)
-* plugin (returns function): binds the module to a specific element. Use 'html' as the element, if the module is not bound to an UI element.
+* init: use this function to initialize any global/non-modular helpers (lazy loaders, cookies, page tracking, etc.)
+* plugin: binds the module to a specific element. Use 'html' as the element, if the module is not bound to an UI element.
 
 #### Module API
 
-* method1
-* method2
+* init: initializes any global/non-modular helpers (lazy loaders, cookies, page tracking, etc.)
+* publish: triggers a custom event from the element that the module is bound to
+* subscribe: subscribes to an event from any element and runs the callback 
+* log: logs messages to the console if the debug option is set to true
+/**
+ * callback
+ *
+ * Callback is used to activate modules on
+ * ajax loaded content or hidden elements.
+ * @usage this.callback('.wrapper');
+ *
+ * @param elements  A set of elements to execute the method on
+ */
+
 
 ----------------------------------------
 

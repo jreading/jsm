@@ -29,9 +29,8 @@ define(['js/Class'],function(Class){
 		 *
 		 * Used to publish custom events.
 		 */
-		publish: function(ev, el) {
-			$el = !el ? $('html') : $(el);
-			$el.trigger(ev);
+		publish: function(ev) {
+			$(this.element).trigger(ev);
 		},
 		/**
 		 * subscribe
