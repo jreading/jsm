@@ -32,21 +32,15 @@ define(['js/Class'],function(Class){
 		publish: function(ev, el) {
 			$el = !el ? $('html') : $(el);
 			$el.trigger(ev);
-			
-			this.log('publish', ev, el);
 		},
 		/**
 		 * subscribe
 		 *
 		 * Used to subscribe to events from other modules.
 		 */
-		subscribe: function(ev, callback, el, args) {
+		subscribe: function(ev, callback, el) {
 			$el = !el ? $('html') : $(el);
-			$el.bind(ev, function(e){
-				callback(args)
-			});
-			
-			this.log('subscribe', ev, callback, el);
+			$el.bind(ev, callback);
 		},
 		/**
 		 * log
