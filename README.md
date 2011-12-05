@@ -30,11 +30,9 @@ Demos, etc.
 * publish: triggers a custom event from the element that the module is bound to
 * subscribe: subscribes to an event from any element and runs the callback 
 * log: logs messages to the console if the debug option is set to true
+* callback: 
 /**
- * callback
- *
- * Callback is used to activate modules on
- * ajax loaded content or hidden elements.
+ * used to activate modules on ajax loaded content or hidden elements.
  * @usage this.callback('.wrapper');
  *
  * @param elements  A set of elements to execute the method on
