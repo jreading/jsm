@@ -26,13 +26,15 @@ Demos, etc.
 
 #### Module API
 
-* init: initializes any global/non-modular helpers (lazy loaders, cookies, page tracking, etc.)
+* init: initializes the object with the options and couple it with the element.
+ * @param {object literal} options An array of options.
+ * @param {HTMLElement} element A DOM element.
 * publish: triggers a custom event from the element that the module is bound to
 * subscribe: subscribes to an event from any element and runs the callback 
-* log: logs messages to the console if the debug option is set to true
+* log: output to the console if it exists and debugging is enabled in the sub-class.
+ * @param Accepts any number of arguments, any type.
 * callback: used to activate modules on ajax loaded content or hidden elements.
  * @usage this.callback('.wrapper');
- *
  * @param elements  A set of elements to execute the method on
 
 
