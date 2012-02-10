@@ -8,7 +8,7 @@ define(['js!libs/jquery.min.js'],function() {
 		/**
 		 * jQuery plugin bridge.
 		 * http://alexsexton.com/?p=51
-		 * modified by Big Red Tech <bigred.tech@icrossing.com>
+		 * modified by jsmbp
 		 *
 		 */
 		plugin:  function(name, object, selector) {
