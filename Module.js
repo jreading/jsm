@@ -40,7 +40,7 @@ define(['js/Class'],function(Class){
 		subscribe: function(ev, callback, el, args) {
 			$el = !el ? $('html') : $(el);
 			$el.bind(ev, function(e){
-				callback(args)
+				callback(args);
 			});
 		},
 		/**
