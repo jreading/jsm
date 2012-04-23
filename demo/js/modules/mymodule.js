@@ -39,7 +39,7 @@ define(['js/Module'],function(Module) {
 		}
 	});
 	
-	jsmbp.plugin('mymodule', jsmbp.MyModule, '.mymodule');
+	jsmbp.RegisteredModules['MyModule'] = ['mymodule','.mymodule'];
 	return jsmbp.MyModule;
 });
 

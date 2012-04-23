@@ -3,14 +3,21 @@ define(['js!libs/jquery.min.js'],function() {
 	jsmbp = {
 
 		init: function(){
-			
+
+			//initialize all plugins saved into jsmbp.RegisteredModules
+			//jsLint hates this...
+			for (var prop in jsmbp.RegisteredModules) {
+				$(jsmbp.RegisteredModules[prop][1]).each(function(idx,el) {
+					jsmbp.plugin(jsmbp.RegisteredModules[prop][0], jsmbp[prop], el);
+				});
+			}
 		},
 		/**
-		 * jQuery plugin bridge.
-		 * http://alexsexton.com/?p=51
-		 * modified by jsmbp
-		 *
-		 */
+		* jQuery plugin bridge.
+		* http://alexsexton.com/?p=51
+		* modified by jsmbp
+		*
+		*/
 		plugin:  function(name, object, selector) {
 			$.fn[name] = function(options) {
 				var args = Array.prototype.slice.call(arguments,1);
@@ -28,16 +35,15 @@ define(['js!libs/jquery.min.js'],function() {
 					}
 				});
 	
-				if (instance && options == undefined) {
+				if (instance && options === undefined) {
 					return instance;
 				} else { 
 					return retval; 
 				}
-			}
-			jsmbp.RegisteredModules[name] = selector;
+			};
 			$.fn[name].apply($(selector));
 		},
 		RegisteredModules: {}
-	}
+	};
 	return jsmbp;
 });
