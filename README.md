@@ -9,7 +9,7 @@ A simple Class-based, AMD compliant module setup using jQuery.
 
 ### What it is:
 
-A starter kit for creating AMD modules for UI interactions and browser utils. 
+A starter kit for creating widgets from AMD modules. 
 
 ----------------------------------------
 
