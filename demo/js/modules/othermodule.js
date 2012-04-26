@@ -19,10 +19,8 @@ define(['js/Module'],function(Module) {
 			$(this.element).unbind(this.options.actionevent).bind(this.options.actionevent,$.proxy(function(){
 				this.toggleHeight();
 			},this));
-			this.subscribe('transitionend webkitTransitionEnd',this.showMessage,'.mymodule', [this, 'My Module is finshed transitioning!']);
-			this.subscribe('MyModuleBuilt',this.showMessage,'.mymodule', [this, 'My Module is built!']);
-
-			this.log('OtherModule Build complete.', this.options);
+			this.subscribe('transitionend webkitTransitionEnd',this.showMessage,'.othermodule', [this, 'My Other Module is finshed transitioning!']);
+			this.subscribe('doThatThing',this.showMessage,'.mymodule', [this, 'My Module that thing!']);
 			},
 		showMessage: function(args) {
 			$(args[0].element).append('<div id="msg2">'+args[1]+'</div>');
@@ -33,7 +31,6 @@ define(['js/Module'],function(Module) {
 			} else {
 				$(this.element).removeClass('tall');
 			}
-			console.log("My Module finished transitioning now...");
 		}
 	});
 	/**

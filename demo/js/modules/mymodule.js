@@ -17,9 +17,10 @@ define(['js/Module'],function(Module) {
 		},
 		_build: function() {
 			
-			$(this.element).bind('mouseenter',function(){
-				$(this).addClass('active');
-			}).bind('mouseleave',function(){
+			$(this.element).bind('mouseenter',$.proxy(function(){
+				$(this.element).addClass('active');
+				this.doThatThing();
+			},this)).bind('mouseleave',function(){
 				$(this).removeClass('active');
 			});
 			
@@ -29,10 +30,7 @@ define(['js/Module'],function(Module) {
 			this.log('My Module build complete.', $(this.element).data());
 		},
 		doThatThing: function(args) {
-			$(args[0].element).append('<div id="msg1">'+args[1]+'</div>');
-		},
-		doThatOtherThing: function(args) {
-			$(args[0].element).append('<div id="msg1">'+args[1]+'</div>');
+			this.publish('doThatThing');
 		}
 	});
 	
