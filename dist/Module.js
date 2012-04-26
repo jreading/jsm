@@ -1,13 +1,10 @@
 define(['js/Class'],function(Class){
-	
 	/**
 	* Module
 	*
 	* Our module class that extends the base class "Class"
 	*/
-
 	var Module = Class.extend({
-	
 		options: {},
 		/**
 		* init
