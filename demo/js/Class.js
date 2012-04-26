@@ -1,4 +1,4 @@
-define(['js/JsMBP',],function(JsMBP) {
+define(['js/JsMBP'], function(JsMBP) {
 
 
 		/* Simple JavaScript Inheritance
@@ -8,10 +8,10 @@ define(['js/JsMBP',],function(JsMBP) {
 		// Inspired by base2 and Prototype
 		var initializing = false, fnTest = /xyz/.test(function(){xyz;}) ? /\b_super\b/ : /.*/;
 		// The base Class implementation (does nothing)
-		jsmbp.Class = function(){};
+		var Class = function(){};
 	
 		// Create a new Class that inherits from this class
-		jsmbp.Class.extend = function(prop) {
+		Class.extend = function(prop) {
 			
 			var _super = this.prototype;
 	
@@ -63,7 +63,8 @@ define(['js/JsMBP',],function(JsMBP) {
 			Class.extend = arguments.callee;
 	
 			return Class;
-		}
+		};
 
+		return Class;
 });
 

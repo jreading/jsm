@@ -1,6 +1,7 @@
 define(['js/Module'],function(Module) {
 
-	jsmbp.MyModule = jsmbp.Module.extend({
+	
+	var MyModule = Module.extend({
 
 		options: {
 			//options here
@@ -39,7 +40,10 @@ define(['js/Module'],function(Module) {
 		}
 	});
 	
-	jsmbp.RegisteredModules['MyModule'] = ['mymodule','.mymodule'];
-	return jsmbp.MyModule;
+	//jsmbp.RegisteredModules['MyModule'] = ['mymodule','.mymodule'];
+
+	JsMBP.plugin('mymodule', MyModule, '.mymodule');
+
+	return MyModule;
 });
 

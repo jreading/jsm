@@ -38,9 +38,6 @@ For an example, look at the [demo](https://github.com/jreading/JsModuleBoilerpla
 * subscribe: subscribes to an event from any element and runs the callback 
 * log: output to the console if it exists and debugging is enabled in the sub-class.
  * @param Accepts any number of arguments, any type.
-* callback: used to activate modules on ajax loaded content or hidden elements.
- * @usage this.callback('.wrapper');
- * @param elements  A set of elements to execute the method on
 
 
 ----------------------------------------

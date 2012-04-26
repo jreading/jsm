@@ -1,6 +1,7 @@
 define(['js/Module'],function(Module) {
 
-	jsmbp.OtherModule = jsmbp.Module.extend({
+
+		var OtherModule = Module.extend({
 
 		options: {
 			//options here
@@ -19,12 +20,13 @@ define(['js/Module'],function(Module) {
 		},
 	
 		_build: function(){
-			this.log('Build complete.', this.options);
-			$(this.element).bind(this.options.actionevent,$.proxy(function(){
+			$(this.element).unbind(this.options.actionevent).bind(this.options.actionevent,$.proxy(function(){
 				this.toggleHeight();
 			},this));
 			this.subscribe('transitionend webkitTransitionEnd',this.showMessage,'.mymodule', [this, 'My Module is finshed transitioning!']);
 			this.subscribe('MyModuleBuilt',this.showMessage,'.mymodule', [this, 'My Module is built!']);
+			
+			this.log('OtherModule Build complete.', this.options);
 			}, 
 		showMessage: function(args) {
 			$(args[0].element).append('<div id="msg2">'+args[1]+'</div>');
@@ -38,8 +40,10 @@ define(['js/Module'],function(Module) {
 			console.log("My Module finished transitioning now...")
 		}
 	});
-	
-	jsmbp.RegisteredModules['OtherModule'] = ['othermodule','.othermodule'];
-	return jsmbp.OtherModule;
+
+	JsMBP.plugin('othermodule', OtherModule, '.othermodule');
+
+	return OtherModule;
+
 });
 

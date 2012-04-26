@@ -17,8 +17,8 @@
 	</script>
 	<script type="text/javascript" src="js/libs/curl.js"></script>
 	<script type="text/javascript">
-		curl(['modules/mymodule', 'modules/othermodule'], function(mymodule,othermodule){
-			jsmbp.init();
+		curl(['modules/mymodule', 'modules/othermodule-extend'], function(mymodule,othermodule){
+			JsMBP.init();
 		});
 	</script>
 	<link rel="stylesheet" href="css/demo.css">
@@ -39,7 +39,7 @@
 				<h3>My Module</h3>
 				<p>This module has the debug option set to 'true' and subscribes to the 'click' & 'transitionEnd' event of "Other Module"</p>
 			</div>
-			<div id="mymodule2" class="module othermodule" data-actionevent="click">
+			<div id="mymodule2" class="module othermodule" data-actionevent="click" data-debug="true">
 				<h3>Other Module</h3>
 				<p>This module subscribes to the 'transitionEnd' event of "My Module" and overrides it's default behavior 'mouseover' with 'click'</p>
 			</div>

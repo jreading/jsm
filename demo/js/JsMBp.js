@@ -1,16 +1,10 @@
 define(['js!libs/jquery.min.js'],function() {
 	//add to global namespace
-	jsmbp = {
+	JsMBP = {
 
 		init: function(){
 
-			//initialize all plugins saved into jsmbp.RegisteredModules
-			//jsLint hates this...
-			for (var prop in jsmbp.RegisteredModules) {
-				$(jsmbp.RegisteredModules[prop][1]).each(function(idx,el) {
-					jsmbp.plugin(jsmbp.RegisteredModules[prop][0], jsmbp[prop], el);
-				});
-			}
+			
 		},
 		/**
 		* jQuery plugin bridge.
@@ -24,26 +18,20 @@ define(['js!libs/jquery.min.js'],function() {
 				var instance;
 				var retval = this.each(function() {
 					instance = $.data(this, name);
-					if (instance) {
-						if (typeof(options) == 'string') {
-							if(instance[options])instance[options].apply(instance,args);
-						} else {
-							instance.init(options);
-						}
+					if (typeof(options) == 'string') {
+						if(instance[options])instance[options].apply(instance,args);
 					} else {
 						instance = $.data(this, name, new object(options, this));
 					}
 				});
-	
 				if (instance && options === undefined) {
 					return instance;
-				} else { 
-					return retval; 
+				} else {
+					return retval;
 				}
 			};
 			$.fn[name].apply($(selector));
-		},
-		RegisteredModules: {}
+		}
 	};
-	return jsmbp;
+	return JsMBP;
 });
