@@ -18,7 +18,7 @@ define(['js!libs/jquery.min.js'],function() {
 				var retval = this.each(function() {
 					instance = $.data(this, name);
 					if (typeof(options) == 'string') {
-						if(instance[options])instance[options].apply(instance,args);
+						if (instance[options]) instance[options].apply(instance,args);
 					} else {
 						instance = $.data(this, name, new object(options, this));
 					}

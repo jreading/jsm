@@ -1,13 +1,10 @@
 define(['js/Module'],function(Module) {
 
-
-		var OtherModule = Module.extend({
-
+	var OtherModule = Module.extend({
 		options: {
 			//options here
 			actionevent: 'mouseover'
 		},
-	
 		/**
 		* Construct the module with the supplied options.
 		*
@@ -18,7 +15,6 @@ define(['js/Module'],function(Module) {
 			this._super(opts, element);
 			this._build();
 		},
-	
 		_build: function(){
 			$(this.element).unbind(this.options.actionevent).bind(this.options.actionevent,$.proxy(function(){
 				this.toggleHeight();
@@ -46,6 +42,5 @@ define(['js/Module'],function(Module) {
 	JsMBP.plugin('othermodule', OtherModule, '.othermodule');
 
 	return OtherModule;
-
 });
 

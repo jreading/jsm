@@ -1,24 +1,20 @@
 define(['js/Module'],function(Module) {
 
-	
 	var MyModule = Module.extend({
-
 		options: {
 			//options here
 			
 		},
-	
 		/**
-		 * Construct the module with the supplied options.
-		 *
-		 * @param {object literal} opts A list of options to override the default options.
-		 * @param {HTMLElement} element The element to couple with the module instance.
-		 */
+		* Construct the module with the supplied options.
+		*
+		* @param {object literal} opts A list of options to override the default options.
+		* @param {HTMLElement} element The element to couple with the module instance.
+		*/
 		init: function(opts, element) {
 			this._super(opts, element);
 			this._build();
 		},
-	
 		_build: function() {
 			
 			$(this.element).bind('mouseenter',function(){
@@ -40,8 +36,6 @@ define(['js/Module'],function(Module) {
 		}
 	});
 	
-	//jsmbp.RegisteredModules['MyModule'] = ['mymodule','.mymodule'];
-
 	JsMBP.plugin('mymodule', MyModule, '.mymodule');
 
 	return MyModule;
