@@ -3,7 +3,7 @@ JsModuleBoilerplate
 
 v0.9
 
-A simple Class-based, AMD compliant module setup using jQuery. 
+A simple object literal class-based, AMD compliant module setup using jQuery. 
 
 ----------------------------------------
 
