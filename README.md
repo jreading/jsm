@@ -9,14 +9,13 @@ A simple Class-based, AMD compliant module setup using jQuery.
 
 ### What it is:
 
-A starter kit for creating widgets from AMD modules. 
+A starter kit for creating AMD modules. 
 
 ----------------------------------------
 
 ### How it works:
 
-AMD modules are loaded and bound to UI elements. Data attributes are used to set options for each module instance. 
-The JsMBp uses a registered module object to store instance references.  
+AMD modules are loaded and bound to UI elements. Data attributes are used to set options for each module instance.
 
 For an example, look at the [demo](https://github.com/jreading/JsModuleBoilerplate/tree/master/demo). 
 
