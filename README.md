@@ -23,7 +23,7 @@ For an example, look at the [demo](https://github.com/jreading/JsModuleBoilerpla
 
 ### What's included:
 
-#### JSMBP API
+#### JSM API
 
 * init: use this function to initialize any global/non-modular helpers (lazy loaders, cookies, page tracking, etc.)
 * plugin: binds the module to a specific element. Use 'html' as the element, if the module is not bound to an UI element.
