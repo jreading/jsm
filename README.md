@@ -3,19 +3,19 @@ JsModuleBoilerplate
 
 v0.9
 
-A simple object literal class-based, AMD compliant module setup using jQuery. 
+A simple module setup for widgets. 
 
 ----------------------------------------
 
 ### What it is:
 
-A starter kit for creating AMD modules. 
+A starter kit for creating widgety modules. 
 
 ----------------------------------------
 
 ### How it works:
 
-AMD modules are loaded and bound to UI elements. Data attributes are used to set options for each module instance.
+Modules are loaded and bound to UI elements. Data attributes are used to set options for each module instance.
 
 For an example, look at the [demo](https://github.com/jreading/JsModuleBoilerplate/tree/master/demo). 
 
