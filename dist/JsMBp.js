@@ -1,6 +1,6 @@
-define(['js!libs/jquery.min.js'],function() {
+define(['libs/jquery.min'],function() {
 	//add to global namespace
-	JsMBP = {
+	var jsmbp = {
 
 		init: function(){
 
@@ -10,7 +10,6 @@ define(['js!libs/jquery.min.js'],function() {
 		* jQuery plugin bridge.
 		* http://alexsexton.com/?p=51
 		* modified by jsmbp
-		*
 		*/
 		plugin:  function(name, object, selector) {
 			$.fn[name] = function(options) {
@@ -19,7 +18,7 @@ define(['js!libs/jquery.min.js'],function() {
 				var retval = this.each(function() {
 					instance = $.data(this, name);
 					if (typeof(options) == 'string') {
-						if(instance[options])instance[options].apply(instance,args);
+						if (instance[options]) instance[options].apply(instance,args);
 					} else {
 						instance = $.data(this, name, new object(options, this));
 					}
@@ -33,5 +32,5 @@ define(['js!libs/jquery.min.js'],function() {
 			$.fn[name].apply($(selector));
 		}
 	};
-	return JsMBP;
+	return jsmbp;
 });

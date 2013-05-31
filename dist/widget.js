@@ -1,12 +1,15 @@
-define(['js/Class'],function(Class){
+define(['rclass'],function(rclass){
+
 	/**
 	* Module
 	*
 	* Our module class that extends the base class "Class"
 	*/
-	var Module = Class.extend({
+	var widget = rclass.extend({
 		options: {
-			debug: false
+			debug: false,
+			transitionEnd: 'transitionEnd oTransitionEnd msTransitionEnd transitionend webkitTransitionEnd',
+			blnTransition: $('html').hasClass('csstransitions')
 		},
 		/**
 		* init
@@ -20,35 +23,7 @@ define(['js/Class'],function(Class){
 			this.element = $(element);
 			// extend default options with options args, and data attr options
 			this.options = $.extend(this.options, options, this.element.data());
-			this.log('component init', this.options, this.element);
-		},
-		/**
-		* publish
-		*
-		* Used to publish custom events.
-		*/
-		publish: function(ev) {
-			$(this.element).trigger(ev);
-		},
-		/**
-		* subscribe
-		*
-		* Used to subscribe to events from other modules.
-		*/
-		subscribe: function(ev, callback, element, args) {
-			$el = !element ? $('html') : $(element);
-			$el.unbind(ev).bind(ev, function(e){
-				callback(args);
-			});
-		},
-		/**
-		* AddAnimation
-		*
-		* Used to add animations css or jQuery fallback animation.
-		*/
-		addAnimation: function(css, callback, el, args) {
-			this.log(typeof css == "string");
-
+			this.log('widget init', this.options, this.element);
 		},
 		/**
 		* log
@@ -60,9 +35,9 @@ define(['js/Class'],function(Class){
 		*/
 		log: function(){
 			if (this.options.debug && window.console && window.console.log) {
-				window.console.log(arguments);
+				console.log.apply(console, arguments);
 			}
 		}
 	});
-	return Module;
+	return widget;
 });

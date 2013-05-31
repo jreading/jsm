@@ -1,4 +1,4 @@
-define(['js/JsMBP'], function(JsMBP) {
+define(function(jsmbp) {
 
 
 		/* Simple JavaScript Inheritance
