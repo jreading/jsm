@@ -1,4 +1,4 @@
-JsModuleBoilerplate
+JSM (JavaScript Simple Modules)
 =====================
 
 v0.9

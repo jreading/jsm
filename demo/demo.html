@@ -10,12 +10,12 @@
 	<script type="text/javascript" src="js/libs/require.js"></script>
 	<script type="text/javascript">
 		require.config({
-			baseUrl: "/JsModuleBoilerplate/demo/js/"
+			baseUrl: "/jsm/demo/js/"
 		});
-		require(['jsmbp','modules/mymodule','modules/othermodule'], function(jsmbp, mymodule,othermodule) {
-			jsmbp.plugin('mymodule', mymodule, '.mymodule');
-			jsmbp.plugin('othermodule', othermodule, '.othermodule');
-			jsmbp.init();
+		require(['jsm','modules/mymodule','modules/othermodule'], function(jsm, mymodule,othermodule) {
+			jsm.plugin('mymodule', mymodule, '.mymodule');
+			jsm.plugin('othermodule', othermodule, '.othermodule');
+			jsm.init();
 		});
 	</script>
 	<link rel="stylesheet" href="css/demo.css">
@@ -28,7 +28,7 @@
 		</header>
 		<div id="main">
 		    <!-- MAIN CONTENT -->
-			<h1>JsMBp Demo</h1>
+			<h1>JSM Demo</h1>
 			<h2>Step 1: Open Your Console</h2>
 			<h2>Step 2: Mouse over "My Module"</h2>
 			<h2>Step 3: Click "Other Module"</h2>
