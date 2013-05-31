@@ -1,5 +1,5 @@
 <!doctype html>  
-<html lang="en">
+<html lang="en" class="csstransitions">
 <head>
 	<meta charset="utf-8">
 	<title>JsModuleBP Demo</title>
@@ -7,18 +7,15 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="">
+	<script type="text/javascript" src="js/libs/require.js"></script>
 	<script type="text/javascript">
-		curl = {
-		        paths: {
-		            modules: 'js/modules/',
-		            libs: 'js/libs/'
-		        }
-		};
-	</script>
-	<script type="text/javascript" src="js/libs/curl.js"></script>
-	<script type="text/javascript">
-		curl(['modules/mymodule', 'modules/othermodule-extend'], function(mymodule,othermodule){
-			JsMBP.init();
+		require.config({
+			baseUrl: "/JsModuleBoilerplate/demo/js/"
+		});
+		require(['jsmbp','modules/mymodule','modules/othermodule'], function(jsmbp, mymodule,othermodule) {
+			jsmbp.plugin('mymodule', mymodule, '.mymodule');
+			jsmbp.plugin('othermodule', othermodule, '.othermodule');
+			jsmbp.init();
 		});
 	</script>
 	<link rel="stylesheet" href="css/demo.css">

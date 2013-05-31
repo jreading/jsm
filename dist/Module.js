@@ -5,7 +5,9 @@ define(['js/Class'],function(Class){
 	* Our module class that extends the base class "Class"
 	*/
 	var Module = Class.extend({
-		options: {},
+		options: {
+			debug: false
+		},
 		/**
 		* init
 		*
@@ -16,10 +18,8 @@ define(['js/Class'],function(Class){
 		*/
 		init: function(options, element){
 			this.element = $(element);
-			this.options = $.extend({
-				debug: false
-			}, this.options, options, this.element.data());
-			
+			// extend default options with options args, and data attr options
+			this.options = $.extend(this.options, options, this.element.data());
 			this.log('component init', this.options, this.element);
 		},
 		/**
@@ -35,11 +35,20 @@ define(['js/Class'],function(Class){
 		*
 		* Used to subscribe to events from other modules.
 		*/
-		subscribe: function(ev, callback, el, args) {
-			$el = !el ? $('html') : $(el);
+		subscribe: function(ev, callback, element, args) {
+			$el = !element ? $('html') : $(element);
 			$el.unbind(ev).bind(ev, function(e){
 				callback(args);
 			});
+		},
+		/**
+		* AddAnimation
+		*
+		* Used to add animations css or jQuery fallback animation.
+		*/
+		addAnimation: function(css, callback, el, args) {
+			this.log(typeof css == "string");
+
 		},
 		/**
 		* log
@@ -57,5 +66,3 @@ define(['js/Class'],function(Class){
 	});
 	return Module;
 });
-
-

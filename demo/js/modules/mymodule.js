@@ -1,6 +1,6 @@
-define(['js/Module'],function(Module) {
+define(['widget'],function(widget) {
 
-	var MyModule = Module.extend({
+	var mymodule = widget.extend({
 		options: {
 			//options here
 			
@@ -18,24 +18,19 @@ define(['js/Module'],function(Module) {
 		_build: function() {
 			
 			$(this.element).bind('mouseenter',$.proxy(function(){
-				$(this.element).addClass('active');
+				this.toggleAnimation('active');
 				this.doThatThing();
-			},this)).bind('mouseleave',function(){
-				$(this).removeClass('active');
-			});
-			
-			this.subscribe('click',this.doThatThing,'.othermodule', [this, 'Other Module was clicked!']);
-			this.subscribe('transitionend webkitTransitionEnd',this.doThatOtherThing,'.othermodule',[this, 'Other Module is finshed transitioning!']);
-			
+			},this)).bind('mouseleave',$.proxy(function(){
+				this.toggleAnimation('active');
+			},this));
+
 			this.log('My Module build complete.', $(this.element).data());
 		},
 		doThatThing: function(args) {
 			this.publish('doThatThing');
 		}
 	});
-	
-	JsMBP.plugin('mymodule', MyModule, '.mymodule');
 
-	return MyModule;
+	return mymodule;
 });
 

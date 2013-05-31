@@ -1,6 +1,6 @@
-define(['js/Module'],function(Module) {
+define(['widget'],function(widget) {
 
-	var OtherModule = Module.extend({
+	var othermodule = widget.extend({
 		options: {
 			//options here
 			actionevent: 'mouseover'
@@ -33,11 +33,7 @@ define(['js/Module'],function(Module) {
 			}
 		}
 	});
-	/**
-	* TODO: Need a way to not call this if it's being extended from another Module
-	*/
-	JsMBP.plugin('othermodule', OtherModule, '.othermodule');
 
-	return OtherModule;
+	return othermodule;
 });
 

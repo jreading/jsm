@@ -1,6 +1,6 @@
-define(['js!libs/jquery.min.js'],function() {
+define(['libs/jquery.min'],function() {
 	//add to global namespace
-	JsMBP = {
+	var jsmbp = {
 
 		init: function(){
 
@@ -32,5 +32,5 @@ define(['js!libs/jquery.min.js'],function() {
 			$.fn[name].apply($(selector));
 		}
 	};
-	return JsMBP;
+	return jsmbp;
 });
