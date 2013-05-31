@@ -1,0 +1,375 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"type",
+				"typeof"
+			],
+			[
+				"tot",
+				"totalJsFiles"
+			],
+			[
+				"uglify",
+				"uglify-js"
+			],
+			[
+				"bro",
+				"bright-color"
+			],
+			[
+				"fea",
+				"feature-color2"
+			],
+			[
+				"s",
+				"script"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"arg",
+				"arguments"
+			],
+			[
+				"cloe",
+				"closest"
+			],
+			[
+				"res",
+				"resImages"
+			],
+			[
+				"tou",
+				"touch"
+			],
+			[
+				"height",
+				"Height"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/JSHint/JSHint.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"SublimeLinter: Extract Annotations"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 213.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/projects/JsModuleBoilerplate/demo/js/libs/jquery.min.js",
+		"/projects/JsModuleBoilerplate/dist/Module.js",
+		"/projects/JsModuleBoilerplate/demo/demo.html",
+		"/projects/JsModuleBoilerplate/demo/js/modules/othermodule.js",
+		"/projects/JsModuleBoilerplate/demo/js/modules/mymodule.js",
+		"/projects/JsModuleBoilerplate/demo/js/Module.js",
+		"/projects/RPlusBuildScript/_src/css/tablet.less",
+		"/projects/RPlusBuildScript/_src/css/base.less",
+		"/projects/RPlusBuildScript/build/css/tablet.thin.min.css",
+		"/projects/RPlusBuildScript/build/css/smartphone.min.css",
+		"/projects/RPlusBuildScript/_src/css/tablet.thin.less",
+		"/projects/RPlusBuildScript/_src/css/smartphone.thin.less",
+		"/projects/RPlusBuildScript/_src/css/full.less",
+		"/projects/RPlusBuildScript/build/css/full.min.css",
+		"/projects/RPlusBuildScript/build/css/tablet.min.css",
+		"/projects/RPlusBuildScript/node_modules/less/lib/less/tree/ruleset.js",
+		"/projects/RPlusBuildScript/node_modules/less/lib/less/tree/import.js",
+		"/projects/LG3.0/www/_src/js/lg.js",
+		"/Users/jreading/Desktop/app.js",
+		"/projects/less.js/test/less-test.js",
+		"/projects/RPlusBuildScript/node_modules/less/lib/less/parser.js",
+		"/projects/less.js/dist/less-1.3.0.js",
+		"/projects/RPlusBuildScript/node_modules/less/dist/less-1.3.0.js",
+		"/projects/RPlusBuildScript/node_modules/less/bin/lessc",
+		"/projects/RPlusBuildScript/_src/less.js",
+		"/projects/RPlusBuildScript/build/css/modules/foo.min.css",
+		"/projects/js-assessment/tests/app/arrays.js",
+		"/projects/RPlusBuildScript/_src/css/modules/foo.less",
+		"/projects/RPlusBuildScript/_src/css/modules/foo.tablet.less",
+		"/projects/RPlusBuildScript/build/js/modules/baz.min.js",
+		"/projects/RPlusBuildScript/_src/css/smartphone.less",
+		"/projects/RPlusBuildScript/package.json",
+		"/projects/RPlusBuildScript/_src/js/modules/bar.js",
+		"/projects/RPlusBuildScript/_src/js/modules/foo.js",
+		"/projects/RPlusBuildScript/_src/js/modules/baz.js",
+		"/projects/R.js-Strip-AMD/build-strip-amd.js",
+		"/projects/RPlusBuildScript/build/js/modules/bar.min.js",
+		"/projects/RPlusBuildScript/_src/js/modules/test.js",
+		"/projects/RPlusBuildScript/rplusbuild.js",
+		"/projects/RPlusBuildScript/build/css/base.min.css",
+		"/projects/RPlusBuildScript/_src/css/smartphone",
+		"/projects/RPlusBuildScript/_src/css/tablet.css",
+		"/projects/RPlusBuildScript/built/css/modules/foo.min.css",
+		"/projects/RPlusBuildScript/build/js/modules/test.min.js",
+		"/projects/RPlusBuildScript/_src/css/screen.less",
+		"/projects/RPlusBuildScript/build.js",
+		"/projects/RPlusBuildScript/_src/js/core.js",
+		"/projects/RPlusBuildScript/build/css/modules/test.min.css",
+		"/projects/RPlusBuildScript/build/css/test.min.css",
+		"/projects/RPlusBuildScript/build/js/modules/foo.min.js",
+		"/projects/RPlusBuildScript/build/js/modules/module.js",
+		"/projects/RPlusBuildScript/build/js/modules/build.txt",
+		"/projects/RPlusBuildScript/build/js/modules/test.js",
+		"/projects/RPlusBuildScript/_src/js/modules/module.js",
+		"/projects/RPlusBuildScript/r.js",
+		"/projects/RPlusBuildScript/test-built.js",
+		"/projects/RPlusBuildScript/module-built.js",
+		"/projects/RPlusBuildScript/build/js/modules/module-built.js",
+		"/projects/RPlusBuildScript/.gitignore",
+		"/projects/RPlusBuildScript/_src/modules/module.js",
+		"/projects/RPlusBuildScript/RPlusBuildScript.sublime-project",
+		"/projects/AAAIE/www/_src/js/build.xml",
+		"/projects/RPlusBuildScript/build-strip-amd.js",
+		"/projects/AAAIE/www/_src/css/aaaie.less",
+		"/projects/AAAIE/www/_src/css/modules/carousel.less",
+		"/projects/AAAIE/www/_src/js/modules/carousel.js",
+		"/projects/AAAIE/www/css/aaaie.min.css",
+		"/projects/AAAIE/www/css/modules/carousel.min.css",
+		"/projects/r.js/build/build.js",
+		"/projects/AAAIE/www/_src/build.js",
+		"/projects/AAAIE/www/index.html",
+		"/projects/AAAIE/www/_src/r.js",
+		"/projects/AAAIE/www/js/modules/carousel.min.js",
+		"/projects/AAAIE/www/_src/css/readme.txt",
+		"/projects/AAAIE/www/_src/css/build.cmd",
+		"/projects/AAAIE/www/css/modules/carousel.css",
+		"/projects/Marlboro-3.0/prototype/scripts/marlboro.js",
+		"/projects/AAAIE/www/_src/js/aaaie.js",
+		"/projects/less-test/less/style.less",
+		"/projects/LG3.0/www/_src/css/lg.css",
+		"/projects/AAAIE/www/css/aaaie.css",
+		"/var/folders/Mg/MgIfXkW-FiSzBNFgodWxXa938sw/-Tmp-/sublime-svn-1336079366/SVN",
+		"/projects/AAAIE/www/_src/js/tmp/.empty",
+		"/projects/LG3.0/www/_src/js/components/form.js",
+		"/projects/LG3.0/www/_src/js/components/tooltip.js",
+		"/projects/Marlboro-3.0/prototype/css/screen.css",
+		"/var/folders/Mg/MgIfXkW-FiSzBNFgodWxXa938sw/-Tmp-/sublime-svn-1335993812/SVN",
+		"/var/folders/Mg/MgIfXkW-FiSzBNFgodWxXa938sw/-Tmp-/sublime-svn-1335993748/SVN",
+		"/var/folders/Mg/MgIfXkW-FiSzBNFgodWxXa938sw/-Tmp-/sublime-svn-1335993714/SVN",
+		"/var/folders/Mg/MgIfXkW-FiSzBNFgodWxXa938sw/-Tmp-/sublime-svn-1335993678/SVN",
+		"/var/folders/Mg/MgIfXkW-FiSzBNFgodWxXa938sw/-Tmp-/sublime-svn-1335993653/SVN",
+		"/projects/AAAIE/_src/js/aaaie.js",
+		"/projects/AAAIE/.svnignore",
+		"/projects/AAAIE/_src/css/aaaie.less",
+		"/var/folders/Mg/MgIfXkW-FiSzBNFgodWxXa938sw/-Tmp-/sublime-svn-1335991305/SVN",
+		"/projects/AAAIE/_src/js/build.xml",
+		"/projects/AAAIE/_src/css/screen.css",
+		"/projects/Marlboro-3.0/prototype/home.html",
+		"/var/folders/Mg/MgIfXkW-FiSzBNFgodWxXa938sw/-Tmp-/sublime-svn-1335975877/SVN",
+		"/projects/js-assessment/tests/app/functions.js",
+		"/projects/js-assessment/tests/app/objects.js",
+		"/projects/js-assessment/tests/app/views.js",
+		"/projects/dekuyperusa/index.html",
+		"/projects/Marlboro-3.0/prototype/scripts/carousel-touch-built.js",
+		"/projects/Marlboro-3.0/prototype/scripts/coupon-mobile.js",
+		"/Users/jreading/Library/Application Support/Sublime Text 2/Packages/User/SVN.errors.log",
+		"/projects/Marlboro-3.0/prototype/css/access.css",
+		"/projects/Marlboro-3.0/marlboro.sublime-workspace",
+		"/projects/Marlboro-3.0/.svnignore",
+		"/projects/Marlboro-3.0/prototype/scripts/marlboro-mobile.js",
+		"/projects/Marlboro-3.0/prototype/scripts/marlboro-desktop.js",
+		"/projects/Marlboro-3.0/prototype/the-spots.html",
+		"/projects/Marlboro-3.0/prototype/the-continental-club.html",
+		"/projects/Marlboro-3.0/prototype/css/screen.min.css",
+		"/projects/Marlboro-3.0/prototype/scripts/marlboro.mobile.js",
+		"/projects/Marlboro-3.0/prototype/scripts/marlboro.desktop.js",
+		"/projects/Marlboro-3.0/prototype/scripts/marlboro.min.js",
+		"/projects/Marlboro-3.0/prototype/css/gallery.css",
+		"/projects/LG3.0/www/_src/js/components/carousel.js",
+		"/projects/LG3.0/www/_src/build.xml",
+		"/projects/Marlboro-3.0/prototype/scripts/::Global Definitions.less",
+		"/projects/Marlboro-3.0/hp/css/screen.css",
+		"/projects/Marlboro-3.0/hp/home.html",
+		"/projects/Marlboro-3.0/hp/scripts/marlboro.js",
+		"/Users/jreading/Library/Caches/TemporaryItems/Outlook Temp/branches[4].md",
+		"/Users/jreading/Desktop/untitled.js",
+		"/Users/jreading/Desktop/uk.js",
+		"/Users/jreading/.vim/bundle/nerdtree/README.markdown"
+	],
+	"find":
+	{
+		"height": 65.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"thin",
+			"env.com",
+			"conso",
+			"document.ready",
+			"init",
+			"plugin",
+			"$.fn",
+			"import",
+			"todo",
+			"path",
+			"onbuil",
+			"@start",
+			"gradient",
+			".gradient",
+			".gradoent",
+			".gra",
+			"first",
+			"button",
+			"reinit",
+			"callback",
+			"$flavorList",
+			"flavor_browser_list",
+			"428",
+			"428px",
+			"flavor",
+			"nav",
+			"content",
+			"FB",
+			"FeATURE",
+			"Slider",
+			"images/flavors/scaled/",
+			"/images",
+			"<script type=\"text/javascript\">\n   FB.XFBML.parse();\n  </script>",
+			"images/flavors/scaled/",
+			"original",
+			"src=\"images/bottle_loader.gif\" original",
+			"/images",
+			"href=\"/",
+			"src=\"/images",
+			"src=\"images",
+			"before",
+			"modernzr",
+			"alertisSm",
+			"alert",
+			"timer",
+			"98425196850394",
+			"9842519685039498425196850394",
+			"section",
+			"|",
+			"body",
+			"for"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"images/",
+			"images",
+			"",
+			"images/",
+			"src",
+			"images",
+			"href=\"",
+			"src=\"images"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 224.0,
+	"status_bar_visible": true
+}
